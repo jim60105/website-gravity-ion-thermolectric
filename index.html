@@ -1625,63 +1625,118 @@
             技術應用前景
           </h2>
 
-          <!-- Centrifugal Force Amplification Display -->
+          <!-- Scientific Physics Calculator -->
           <div class="efficiency-calculator bg-white rounded-xl p-8 mb-16 shadow-lg" id="efficiency-calculator">
             <div class="text-center mb-8">
-              <h3 class="text-3xl font-bold text-gray-800 mb-4">離心力放大效應展示</h3>
-              <p class="text-xl text-gray-600">調整離心機轉速，觀察功率輸出的指數級增長</p>
+              <h3 class="text-3xl font-bold text-gray-800 mb-4">重力離子熱電轉換計算器</h3>
+              <p class="text-xl text-gray-600">基於 Chen 博士論文的真實物理模型，計算不同離子系統的功率輸出</p>
+              <p class="text-sm text-gray-500 mt-2">使用波茲曼分布和電場強度計算 (公式 1-4)</p>
             </div>
             
             <div class="grid lg:grid-cols-2 gap-12 items-center">
               <!-- Interactive Calculator -->
               <div class="calculator-panel">
+                <!-- Ion System Selection -->
+                <div class="mb-6">
+                  <label for="ion-system-select" class="block text-lg font-semibold text-gray-700 mb-3">
+                    離子系統選擇
+                  </label>
+                  <select id="ion-system-select" class="w-full p-3 border-2 border-gray-400 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-600 bg-white text-gray-900 font-semibold shadow-sm">
+                    <option value="HI" class="text-gray-900 bg-white font-semibold">HI (氫碘酸) - 最高效率 72 W/m³</option>
+                    <option value="LiCl" class="text-gray-900 bg-white font-semibold">LiCl (氯化鋰) - Tolman 實驗驗證</option>
+                    <option value="KCl" class="text-gray-900 bg-white font-semibold">KCl (氯化鉀) - 穩定性良好</option>
+                  </select>
+                  <p class="text-xs text-gray-500 mt-1">不同離子質量差異產生不同的電場強度</p>
+                </div>
+                
+                <!-- RPM Control -->
                 <div class="mb-8">
                   <label for="rpm-slider" class="block text-lg font-semibold text-gray-700 mb-4">
-                    轉速控制：<span id="rpm-display" class="text-electric-blue">0</span> RPM
+                    離心機轉速：<span id="rpm-display" class="text-electric-blue">0</span> RPM
+                    <span id="acceleration" class="text-sm text-gray-500 ml-2">(0.0g)</span>
                   </label>
                   <input 
                     type="range" 
                     id="rpm-slider" 
                     min="0" 
-                    max="1000" 
+                    max="100000" 
                     value="0" 
-                    step="10"
+                    step="1000"
                     class="calculator-slider"
                   />
+                  <p class="text-xs text-gray-500 mt-1">範圍包含實驗室條件到理論最佳化參數 (根據論文 Table 1)</p>
                 </div>
                 
-                <div class="grid grid-cols-2 gap-6 mb-6">
+                <!-- Metrics Display -->
+                <div class="grid grid-cols-2 gap-4 mb-6">
                   <div class="metric-card bg-green-50 rounded-lg p-4 border border-green-200">
-                    <h4 class="text-sm font-semibold text-gray-600 mb-1">功率輸出</h4>
-                    <div class="text-2xl font-bold text-green-600">
-                      <span id="power-output">72.0</span> <span class="text-sm">W/m³</span>
+                    <h4 class="text-sm font-semibold text-gray-600 mb-1">功率密度</h4>
+                    <div class="text-xl font-bold text-green-600">
+                      <span id="power-output">0.00</span> <span class="text-sm">W/m³</span>
                     </div>
+                    <p class="text-xs text-gray-500 mt-1">P = (ΔV/2)² / R</p>
                   </div>
                   <div class="metric-card bg-blue-50 rounded-lg p-4 border border-blue-200">
                     <h4 class="text-sm font-semibold text-gray-600 mb-1">效率倍數</h4>
-                    <div class="text-2xl font-bold text-blue-600">
-                      <span id="efficiency-multiplier">1.00</span> <span class="text-sm">倍</span>
+                    <div class="text-xl font-bold text-blue-600">
+                      <span id="efficiency-multiplier">0.000</span> <span class="text-sm">倍</span>
                     </div>
+                    <p class="text-xs text-gray-500 mt-1">相對於基準值</p>
                   </div>
                   <div class="metric-card bg-purple-50 rounded-lg p-4 border border-purple-200">
                     <h4 class="text-sm font-semibold text-gray-600 mb-1">日產電量</h4>
-                    <div class="text-2xl font-bold text-purple-600">
-                      <span id="energy-per-day">1728</span> <span class="text-sm">Wh</span>
+                    <div class="text-xl font-bold text-purple-600">
+                      <span id="energy-per-day">0.0</span> <span class="text-sm">Wh</span>
                     </div>
+                    <p class="text-xs text-gray-500 mt-1">24 小時連續運行</p>
                   </div>
                   <div class="metric-card bg-orange-50 rounded-lg p-4 border border-orange-200">
                     <h4 class="text-sm font-semibold text-gray-600 mb-1">材料應力</h4>
-                    <div class="text-2xl font-bold text-orange-600">正常</div>
+                    <div class="text-lg font-bold text-orange-600">安全</div>
+                    <p class="text-xs text-gray-500 mt-1">鋁合金結構限制</p>
                   </div>
                 </div>
                 
+                <!-- Material Warning -->
                 <div id="material-warning" class="hidden"></div>
+                
+                <!-- Scientific Information -->
+                <div class="bg-blue-50 rounded-lg p-4 mt-6 border border-blue-200">
+                  <h5 class="text-sm font-semibold text-blue-800 mb-2">📚 科學原理</h5>
+                  <ul class="text-xs text-blue-700 space-y-1">
+                    <li>• 波茲曼分布：C(h+Δh)/C(h) = exp(-mGΔh/kT)</li>
+                    <li>• 電場強度：E = (m₁ - m₂)G / (2q)</li>
+                    <li>• 電壓差：ΔV = (m₁ - m₂)GH / (2q)</li>
+                    <li>• 功率密度：P = (ΔV/2)² / R</li>
+                  </ul>
+                </div>
               </div>
               
-              <!-- Performance Chart -->
+              <!-- Scientific Performance Chart -->
               <div class="chart-panel">
-                <div class="chart-container bg-gray-50 rounded-lg p-4">
+                <div class="chart-container bg-gray-50 rounded-lg p-6">
+                  <h4 class="text-lg font-semibold text-gray-800 mb-4">多離子系統功率輸出比較</h4>
                   <canvas id="efficiency-chart"></canvas>
+                  
+                  <!-- Chart Legend and Information -->
+                  <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                    <div class="bg-white rounded p-3 border">
+                      <h6 class="font-semibold text-gray-700 mb-2">🧪 實驗數據來源</h6>
+                      <ul class="text-gray-600 space-y-1">
+                        <li>• Tolman 1910: LiI, KI 溶液測試</li>
+                        <li>• Chen 2024: HI 理論計算</li>
+                        <li>• 論文 Table 1: 結構參數優化</li>
+                      </ul>
+                    </div>
+                    <div class="bg-white rounded p-3 border">
+                      <h6 class="font-semibold text-gray-700 mb-2">⚡ 離子質量差異</h6>
+                      <ul class="text-gray-600 space-y-1">
+                        <li>• H⁺: 1.15×10⁻²⁶ kg, I⁻: 2.11×10⁻²⁵ kg</li>
+                        <li>• Li⁺: 1.15×10⁻²⁶ kg, Cl⁻: 5.89×10⁻²⁶ kg</li>
+                        <li>• K⁺: 6.49×10⁻²⁶ kg, Cl⁻: 5.89×10⁻²⁶ kg</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2776,6 +2831,7 @@
     <script src="/assets/js/math-renderer.js"></script>
     <script src="/assets/js/data-visualization.js"></script>
     <script src="/assets/js/experiment-simulation.js"></script>
+    <script src="/assets/js/physics-engine.js"></script>
     <script src="/assets/js/efficiency-calculator.js"></script>
     <script src="/assets/js/impact-charts.js"></script>
     <script src="/assets/js/roadmap-timeline.js"></script>
