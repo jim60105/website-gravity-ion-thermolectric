@@ -12,13 +12,17 @@ class ExperimentSimulation {
         top: 0.012,
         bottom: 0.0,
         difference: 0.012,
-        direction: '向上'
+        get direction() {
+          return Utils.Language.t('experiment.upward');
+        }
       },
       upsideDown: {
         top: 0.0,
         bottom: 0.012,
         difference: -0.012,
-        direction: '向下'
+        get direction() {
+          return Utils.Language.t('experiment.downward');
+        }
       }
     };
     this.init();

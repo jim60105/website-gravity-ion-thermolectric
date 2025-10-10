@@ -51,7 +51,10 @@ class DataVisualization {
 
     // 3 months data (weekly measurements)
     for (let week = 1; week <= 12; week++) {
-      data['3months'].labels.push(`第${week}週`);
+      const weekLabel = Utils.Language.isZh() 
+        ? `第${week}週` 
+        : `Week ${week}`;
+      data['3months'].labels.push(weekLabel);
       const baseVoltage = 1.2;
       const variation = (Math.random() - 0.5) * 0.04;
       data['3months'].voltage.push(baseVoltage + variation);
@@ -247,7 +250,8 @@ class DataVisualization {
 
     if (fieldElement) {
       fieldElement.textContent = fieldDirection;
-      fieldElement.style.color = fieldDirection === '向上' ? '#059669' : '#dc2626';
+      const upwardText = Utils.Language.t('experiment.upward');
+      fieldElement.style.color = fieldDirection === upwardText ? '#059669' : '#dc2626';
     }
   }
 
