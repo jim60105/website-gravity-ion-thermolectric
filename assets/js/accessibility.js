@@ -288,18 +288,26 @@ class AccessibilityEnhancer {
 
         // Scientific diagrams
         if (filename.includes('energy') || filename.includes('thermodynamic')) {
-            return `${contextName} 相關的科學示意圖`;
+            return Utils.Language.isZh() 
+                ? `${contextName} 相關的科學示意圖`
+                : `${contextName} scientific diagram`;
         }
 
         if (filename.includes('experiment') || filename.includes('test')) {
-            return `${contextName} 實驗設備圖片`;
+            return Utils.Language.isZh()
+                ? `${contextName} 實驗設備圖片`
+                : `${contextName} experimental equipment image`;
         }
 
         if (filename.includes('chart') || filename.includes('graph')) {
-            return `${contextName} 數據圖表`;
+            return Utils.Language.isZh()
+                ? `${contextName} 數據圖表`
+                : `${contextName} data chart`;
         }
 
-        return contextName ? `${contextName} 相關圖片` : '科學研究相關圖片';
+        return contextName 
+            ? Utils.Language.t('accessibility.relatedImage', { context: contextName })
+            : Utils.Language.t('accessibility.defaultImageAlt');
     }
 
     /**
@@ -512,7 +520,8 @@ class AccessibilityEnhancer {
             // Add required field indicators
             if (input.hasAttribute('required')) {
                 const currentLabel = input.getAttribute('aria-label') || '';
-                input.setAttribute('aria-label', `${currentLabel} (必填)`);
+                const requiredText = Utils.Language.isZh() ? '(必填)' : '(required)';
+                input.setAttribute('aria-label', `${currentLabel} ${requiredText}`);
                 input.setAttribute('aria-required', 'true');
             }
 
@@ -522,7 +531,9 @@ class AccessibilityEnhancer {
                 const descElement = document.createElement('div');
                 descElement.id = descId;
                 descElement.className = 'sr-only';
-                descElement.textContent = `輸入提示：${input.placeholder}`;
+                descElement.textContent = Utils.Language.t('accessibility.inputHint', { 
+                    placeholder: input.placeholder 
+                });
                 input.parentNode.insertBefore(descElement, input.nextSibling);
                 input.setAttribute('aria-describedby', descId);
             }
@@ -571,12 +582,12 @@ class AccessibilityEnhancer {
             case 'radio':
                 return '選項';
             case 'select':
-                return '選擇選項';
+                return Utils.Language.isZh() ? '選擇選項' : 'Select option';
             case 'textarea':
-                return placeholder || '文字輸入區域';
+                return placeholder || (Utils.Language.isZh() ? '文字輸入區域' : 'Text input area');
             case 'text':
             default:
-                return placeholder || name || '文字輸入';
+                return placeholder || name || Utils.Language.t('accessibility.defaultInput');
         }
     }
 
@@ -586,14 +597,22 @@ class AccessibilityEnhancer {
     generateButtonLabel(button) {
         const context = button.closest('section, article, div[class*="card"]');
         const heading = context?.querySelector('h1, h2, h3, h4, h5, h6');
-        const contextName = heading?.textContent || '內容';
+        const contextName = heading?.textContent || Utils.Language.t('accessibility.contentArea');
 
-        if (button.classList.contains('share')) {return `分享 ${contextName}`;}
-        if (button.classList.contains('download')) {return `下載 ${contextName}`;}
-        if (button.classList.contains('close')) {return `關閉 ${contextName}`;}
-        if (button.classList.contains('menu')) {return '開啟選單';}
+        if (button.classList.contains('share')) {
+            return Utils.Language.isZh() ? `分享 ${contextName}` : `Share ${contextName}`;
+        }
+        if (button.classList.contains('download')) {
+            return Utils.Language.isZh() ? `下載 ${contextName}` : `Download ${contextName}`;
+        }
+        if (button.classList.contains('close')) {
+            return Utils.Language.isZh() ? `關閉 ${contextName}` : `Close ${contextName}`;
+        }
+        if (button.classList.contains('menu')) {
+            return Utils.Language.isZh() ? '開啟選單' : 'Open menu';
+        }
 
-        return '按鈕';
+        return Utils.Language.isZh() ? '按鈕' : 'Button';
     }
 
     /**
@@ -610,19 +629,26 @@ class AccessibilityEnhancer {
             const target = document.getElementById(targetId);
             if (target) {
                 const targetHeading = target.querySelector('h1, h2, h3, h4, h5, h6');
-                return `前往 ${targetHeading?.textContent || targetId}`;
+                const targetText = targetHeading?.textContent || targetId;
+                return Utils.Language.isZh() ? `前往 ${targetText}` : `Go to ${targetText}`;
             }
         }
 
         if (href?.includes('youtube.com') || href?.includes('youtu.be')) {
-            return `觀看影片：${contextName}`;
+            return Utils.Language.isZh() 
+                ? `觀看影片：${contextName}` 
+                : `Watch video: ${contextName}`;
         }
 
         if (href?.includes('.pdf') || href?.includes('vixra.org')) {
-            return `下載文件：${contextName}`;
+            return Utils.Language.isZh() 
+                ? `下載文件：${contextName}` 
+                : `Download document: ${contextName}`;
         }
 
-        return contextName ? `閱讀更多：${contextName}` : '連結';
+        return contextName 
+            ? Utils.Language.t('accessibility.readMoreLink', { context: contextName })
+            : Utils.Language.t('accessibility.defaultLink');
     }
 
     /**
@@ -701,8 +727,11 @@ class AccessibilityEnhancer {
         // Announce navigation changes
         if (typeof NavigationController !== 'undefined') {
             document.addEventListener('navigationchange', (e) => {
-                const sectionName = e.detail.sectionName || '內容區塊';
-                this.announceToScreenReader(`已前往 ${sectionName}`);
+                const sectionName = e.detail.sectionName || Utils.Language.t('accessibility.contentBlock');
+                const message = Utils.Language.isZh() 
+                    ? `已前往 ${sectionName}` 
+                    : `Navigated to ${sectionName}`;
+                this.announceToScreenReader(message);
             });
         }
     }
