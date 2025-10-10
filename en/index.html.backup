@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="zh-TW">
+<html lang="en">
   <head>
     <!-- Basic HTML Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>重力離子熱電技術 | Gravity Ion Thermoelectric Technology</title>
+    <title>Gravity Ion Thermoelectric Technology</title>
 
     <!-- Google Supported Meta Tags -->
     <meta
       name="description"
-      content="革命性的重力離子熱電技術，實現熱能到電能的高效轉換。探索突破性的物理發現，顛覆傳統熱力學定律。無燃料、無污染的綠色能源新紀元。"
+      content="Revolutionary gravity ion thermoelectric technology achieving efficient heat-to-electricity conversion. Explore breakthrough physics discoveries challenging traditional thermodynamics. Fuel-free, pollution-free green energy revolution."
     />
     <meta name="author" content="Kuo Tso Chen" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -19,16 +19,16 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://website-gravity-ion-thermoelectric.jim60105.workers.dev/" />
-    <meta property="og:title" content="重力離子熱電技術 | 挑戰熱力學第二定律的革命性發現" />
+    <meta property="og:title" content="Gravity Ion Thermoelectric Technology | Revolutionary Discovery Challenging the Second Law" />
     <meta
       property="og:description"
-      content="革命性的重力離子熱電技術，實現熱能到電能的高效轉換。探索突破性的物理發現，顛覆傳統熱力學定律。無燃料、無污染的綠色能源新紀元。"
+      content="Revolutionary gravity ion thermoelectric technology achieving efficient heat-to-electricity conversion. Explore breakthrough physics discoveries challenging traditional thermodynamics. Fuel-free, pollution-free green energy revolution."
     />
     <meta property="og:image" content="https://website-gravity-ion-thermoelectric.jim60105.workers.dev/favicon.svg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="重力離子熱電技術 - 革命性能源轉換技術" />
-    <meta property="og:site_name" content="重力離子熱電技術" />
+    <meta property="og:image:alt" content="Gravity Ion Thermoelectric Technology - Revolutionary Energy Conversion" />
+    <meta property="og:site_name" content="Gravity Ion Thermoelectric Technology" />
     <meta property="og:locale" content="zh_TW" />
 
     <!-- Twitter Card -->
@@ -36,22 +36,22 @@
     <!-- TODO: Change to KT Chen's twitter handle -->
     <meta name="twitter:site" content="@jim60105" />
     <meta name="twitter:creator" content="@jim60105" />
-    <meta name="twitter:title" content="重力離子熱電技術 | 挑戰熱力學第二定律的革命性發現" />
+    <meta name="twitter:title" content="Gravity Ion Thermoelectric Technology | Revolutionary Discovery Challenging the Second Law" />
     <meta
       name="twitter:description"
-      content="革命性的重力離子熱電技術，實現熱能到電能的高效轉換。探索突破性的物理發現，顛覆傳統熱力學定律。"
+      content="Revolutionary gravity ion thermoelectric technology achieving efficient heat-to-electricity conversion. Explore breakthrough physics discoveries challenging traditional thermodynamics."
     />
     <meta name="twitter:image" content="https://website-gravity-ion-thermoelectric.jim60105.workers.dev/favicon.svg" />
-    <meta name="twitter:image:alt" content="重力離子熱電技術 - 革命性能源轉換技術" />
+    <meta name="twitter:image:alt" content="Gravity Ion Thermoelectric Technology - Revolutionary Energy Conversion" />
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ResearchProject",
-      "name": "重力離子熱電技術",
+      "name": "Gravity Ion Thermoelectric Technology",
       "alternateName": "Gravity Ion Thermoelectric Technology",
-      "description": "革命性的重力離子熱電技術，實現熱能到電能的高效轉換。探索突破性的物理發現，顛覆傳統熱力學定律。",
+      "description": "Revolutionary gravity ion thermoelectric technology achieving efficient heat-to-electricity conversion. Explore breakthrough physics discoveries challenging traditional thermodynamics.",
       "url": "https://website-gravity-ion-thermoelectric.jim60105.workers.dev",
       "image": {
         "@type": "ImageObject",
@@ -84,7 +84,7 @@
       "about": {
         "@type": "Thing",
         "name": "熱電轉換技術",
-        "description": "利用重力場效應實現熱能到電能轉換的革命性技術"
+        "description": "利用Gravitational Field Effect實現熱能到電能轉換的革命性技術"
       },
       "mainEntity": {
         "@type": "ScholarlyArticle",
@@ -105,12 +105,12 @@
 
     <!-- Link Tags -->
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://website-gravity-ion-thermoelectric.jim60105.workers.dev/zh/" />
+    <link rel="canonical" href="https://website-gravity-ion-thermoelectric.jim60105.workers.d../zh/" />
     
     <!-- Alternate Languages -->
-    <link rel="alternate" hreflang="zh-TW" href="https://website-gravity-ion-thermoelectric.jim60105.workers.dev/zh/" />
-    <link rel="alternate" hreflang="en" href="https://website-gravity-ion-thermoelectric.jim60105.workers.dev/en/" />
-    <link rel="alternate" hreflang="x-default" href="https://website-gravity-ion-thermoelectric.jim60105.workers.dev/zh/" />
+    <link rel="alternate" hreflang="en" href="https://website-gravity-ion-thermoelectric.jim60105.workers.d../zh/" />
+    <link rel="alternate" hreflang="en" href="https://website-gravity-ion-thermoelectric.jim60105.workers.d../zh/" />
+    <link rel="alternate" hreflang="x-default" href="https://website-gravity-ion-thermoelectric.jim60105.workers.d../zh/" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
@@ -197,7 +197,7 @@
       href="#main-content"
       class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-white text-black px-4 py-2 rounded"
     >
-      跳至主要內容 (Skip to main content)
+      Skip to main content
     </a>
 
     <!-- Header Navigation -->
@@ -205,34 +205,34 @@
       <nav class="container mx-auto px-6 py-4" role="navigation" aria-label="主要導航">
         <div class="flex items-center justify-between">
           <div class="flex items-center space-x-4">
-            <h1 class="text-2xl font-bold text-energy-gold">重力離子熱電技術</h1>
+            <h1 class="text-2xl font-bold text-energy-gold">Gravity Ion Thermoelectric Technology</h1>
           </div>
 
           <div class="hidden md:flex space-x-8 items-center">
-            <a href="#hero" class="nav-link text-gray-100 hover:text-electric-blue transition-all duration-300 relative py-2 px-3 rounded-md hover:bg-white/10" aria-label="首頁">
-              首頁
+            <a href="#hero" class="nav-link text-gray-100 hover:text-electric-blue transition-all duration-300 relative py-2 px-3 rounded-md hover:bg-white/10" aria-label="Home">
+              Home
             </a>
-            <a href="#scientific-breakthrough" class="nav-link text-gray-100 hover:text-electric-blue transition-all duration-300 relative py-2 px-3 rounded-md hover:bg-white/10" aria-label="科學突破">
-              科學突破
+            <a href="#scientific-breakthrough" class="nav-link text-gray-100 hover:text-electric-blue transition-all duration-300 relative py-2 px-3 rounded-md hover:bg-white/10" aria-label="Scientific Breakthrough">
+              Scientific Breakthrough
             </a>
-            <a href="#experimental-evidence" class="nav-link text-gray-100 hover:text-electric-blue transition-all duration-300 relative py-2 px-3 rounded-md hover:bg-white/10" aria-label="實驗證據">
-              實驗證據
+            <a href="#experimental-evidence" class="nav-link text-gray-100 hover:text-electric-blue transition-all duration-300 relative py-2 px-3 rounded-md hover:bg-white/10" aria-label="Experimental Evidence">
+              Experimental Evidence
             </a>
-            <a href="#applications-impact" class="nav-link text-gray-100 hover:text-electric-blue transition-all duration-300 relative py-2 px-3 rounded-md hover:bg-white/10" aria-label="應用前景">
-              應用前景
+            <a href="#applications-impact" class="nav-link text-gray-100 hover:text-electric-blue transition-all duration-300 relative py-2 px-3 rounded-md hover:bg-white/10" aria-label="Applications">
+              Applications
             </a>
-            <a href="#academic-recognition" class="nav-link text-gray-100 hover:text-electric-blue transition-all duration-300 relative py-2 px-3 rounded-md hover:bg-white/10" aria-label="學術認可">
-              學術認可
+            <a href="#academic-recognition" class="nav-link text-gray-100 hover:text-electric-blue transition-all duration-300 relative py-2 px-3 rounded-md hover:bg-white/10" aria-label="Academic Recognition">
+              Academic Recognition
             </a>
-            <a href="#call-to-action" class="nav-link text-gray-100 hover:text-electric-blue transition-all duration-300 relative py-2 px-3 rounded-md hover:bg-white/10" aria-label="行動呼籲">
-              行動呼籲
+            <a href="#call-to-action" class="nav-link text-gray-100 hover:text-electric-blue transition-all duration-300 relative py-2 px-3 rounded-md hover:bg-white/10" aria-label="Call to Action">
+              Call to Action
             </a>
             
             <!-- Language Switcher -->
             <div class="language-switcher">
-              <a href="../en/" 
+              <a href="../zh/" 
                  class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
-                 title="Switch to English">
+                 title="切換至正體中文">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
                 </svg>
@@ -242,7 +242,7 @@
           </div>
 
           <!-- Mobile Menu Button -->
-          <button id="mobile-menu-button" class="md:hidden p-2" aria-label="開啟選單" aria-expanded="false">
+          <button id="mobile-menu-button" class="md:hidden p-2" aria-label="Open Menu" aria-expanded="false">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
@@ -252,16 +252,16 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4" role="menu" aria-hidden="true">
           <div class="flex flex-col space-y-4">
-            <a href="#hero" class="nav-link text-gray-100 hover:text-electric-blue transition-colors duration-300 py-2 px-3 rounded-md hover:bg-white/10" role="menuitem">首頁</a>
-            <a href="#scientific-breakthrough" class="nav-link text-gray-100 hover:text-electric-blue transition-colors duration-300 py-2 px-3 rounded-md hover:bg-white/10" role="menuitem">科學突破</a>
-            <a href="#experimental-evidence" class="nav-link text-gray-100 hover:text-electric-blue transition-colors duration-300 py-2 px-3 rounded-md hover:bg-white/10" role="menuitem">實驗證據</a>
-            <a href="#applications-impact" class="nav-link text-gray-100 hover:text-electric-blue transition-colors duration-300 py-2 px-3 rounded-md hover:bg-white/10" role="menuitem">應用前景</a>
-            <a href="#academic-recognition" class="nav-link text-gray-100 hover:text-electric-blue transition-colors duration-300 py-2 px-3 rounded-md hover:bg-white/10" role="menuitem">學術認可</a>
-            <a href="#call-to-action" class="nav-link text-gray-100 hover:text-electric-blue transition-colors duration-300 py-2 px-3 rounded-md hover:bg-white/10" role="menuitem">行動呼籲</a>
+            <a href="#hero" class="nav-link text-gray-100 hover:text-electric-blue transition-colors duration-300 py-2 px-3 rounded-md hover:bg-white/10" role="menuitem">Home</a>
+            <a href="#scientific-breakthrough" class="nav-link text-gray-100 hover:text-electric-blue transition-colors duration-300 py-2 px-3 rounded-md hover:bg-white/10" role="menuitem">Scientific Breakthrough</a>
+            <a href="#experimental-evidence" class="nav-link text-gray-100 hover:text-electric-blue transition-colors duration-300 py-2 px-3 rounded-md hover:bg-white/10" role="menuitem">Experimental Evidence</a>
+            <a href="#applications-impact" class="nav-link text-gray-100 hover:text-electric-blue transition-colors duration-300 py-2 px-3 rounded-md hover:bg-white/10" role="menuitem">Applications</a>
+            <a href="#academic-recognition" class="nav-link text-gray-100 hover:text-electric-blue transition-colors duration-300 py-2 px-3 rounded-md hover:bg-white/10" role="menuitem">Academic Recognition</a>
+            <a href="#call-to-action" class="nav-link text-gray-100 hover:text-electric-blue transition-colors duration-300 py-2 px-3 rounded-md hover:bg-white/10" role="menuitem">Call to Action</a>
             
             <!-- Mobile Language Switcher -->
-            <a href="../en/" class="block px-4 py-2 text-white hover:bg-white/10 rounded">
-              🌐 English
+            <a href="../zh/" class="block px-4 py-2 text-white hover:bg-white/10 rounded">
+              🌐 正體中文
             </a>
           </div>
         </div>
@@ -287,14 +287,14 @@
               <div class="space-y-4">
                 <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
                   <span class="block text-transparent bg-clip-text bg-gradient-to-r from-electric-blue via-energy-gold to-plasma-purple animate-glow">
-                    挑戰熱力學第二定律的
+                    Challenging the
                   </span>
                   <span class="block text-transparent bg-clip-text bg-gradient-to-r from-plasma-purple via-electric-blue to-energy-gold animate-glow" style="animation-delay: 0.5s;">
-                    革命性發現
+                    Second Law of Thermodynamics
                   </span>
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-100 leading-relaxed font-medium">
-                  無燃料、無污染的綠色能源新紀元
+                  Fuel-Free, Pollution-Free Green Energy Revolution
                 </p>
               </div>
 
@@ -305,7 +305,7 @@
                   class="group relative bg-gradient-to-r from-electric-blue to-plasma-purple hover:from-plasma-purple hover:to-electric-blue text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl overflow-hidden"
                   data-scroll-target="#technology"
                 >
-                  <span class="relative z-10">探索科學突破</span>
+                  <span class="relative z-10">探索Scientific Breakthrough</span>
                   <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 transform -skew-x-12 group-hover:translate-x-full transition-all duration-700"></div>
                 </button>
                 <button
@@ -317,7 +317,7 @@
                     <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8.107v3.786a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/>
                     </svg>
-                    觀看解說影片
+                    Watch Explanation
                   </span>
                 </button>
               </div>
@@ -330,8 +330,8 @@
                   <div class="flex items-center gap-4">
                     <div class="text-4xl">🔬</div>
                     <div>
-                      <h3 class="text-xl font-bold text-electric-blue mb-2">科學突破</h3>
-                      <p class="text-gray-100">挑戰百年物理定律</p>
+                      <h3 class="text-xl font-bold text-electric-blue mb-2">Scientific Breakthrough</h3>
+                      <p class="text-gray-100">Challenging Century-Old Physics Laws</p>
                     </div>
                   </div>
                 </div>
@@ -399,7 +399,7 @@
             <div class="space-y-6">
               <h3 class="text-2xl font-semibold text-electric-blue">重力場中的離子分離</h3>
               <p class="text-gray-100 leading-relaxed">
-                在重力場作用下，不同質量的離子會產生分離效應，在內部形成電場梯度並自生電位差。這種現象可將電位差外接輸出電能，打破了傳統熱力學第二定律的限制，達成熱能直接轉換為電能的效果。
+                在重力場作用下，不同質量的離子會產生分離效應，在內部形成電場梯度並自生Voltage Difference。這種現象可將Voltage Difference外接輸出電能，打破了傳統熱力學第二定律的限制，達成熱能直接轉換為電能的效果。
               </p>
               <p class="text-gray-100 leading-relaxed">
                 通過精密控制離子濃度和重力場強度，我們能夠持續產生穩定的電流輸出， 效率遠超傳統熱電轉換技術。
@@ -490,7 +490,7 @@
                     <iframe
                       id="academic-paper-pdf"
                       class="w-full h-full border-0"
-                      src="../assets/docs/5-an-exception-to-carnots-theorem-inferred-from-tolmans-experiment-ion-containing-fluids-driving-continuous-heat-to-electricity-conversion-under-acceleration-jci-web-c.pdf#view=FitV&toolbar=1&navpanes=1&scrollbar=1"
+                      src="assets/docs/5-an-exception-to-carnots-theorem-inferred-from-tolmans-experiment-ion-containing-fluids-driving-continuous-heat-to-electricity-conversion-under-acceleration-jci-web-c.pdf#view=FitV&toolbar=1&navpanes=1&scrollbar=1"
                       title="卡諾定理例外：托爾曼實驗推斷的離子流體在加速度下驅動連續熱電轉換"
                       allow="fullscreen"
                       aria-describedby="pdf-description"
@@ -531,7 +531,7 @@
                         <h5 class="text-lg font-medium text-energy-gold mb-4">下載選項</h5>
                         <div class="space-y-3">
                           <a
-                            href="../assets/docs/5-an-exception-to-carnots-theorem-inferred-from-tolmans-experiment-ion-containing-fluids-driving-continuous-heat-to-electricity-conversion-under-acceleration-jci-web-c.pdf"
+                            href="assets/docs/5-an-exception-to-carnots-theorem-inferred-from-tolmans-experiment-ion-containing-fluids-driving-continuous-heat-to-electricity-conversion-under-acceleration-jci-web-c.pdf"
                             class="block text-sm bg-white/10 hover:bg-white/20 text-gray-200 px-4 py-2 rounded-lg transition-colors duration-300 text-center"
                             target="_blank"
                             download
@@ -559,7 +559,7 @@
                 >
                   <h4 class="text-2xl font-semibold text-electric-blue mb-6">深度技術解析影片</h4>
                   <p class="text-gray-200 mb-8 text-lg">
-                    通過以下兩個關鍵片段，深入了解持續電流產生的物理機制與實驗證據。
+                    通過以下兩個關鍵片段，Learn More持續電流產生的物理機制與Experimental Evidence。
                   </p>
                   
                   <!-- 影片容器 - 使用更好的響應式佈局 -->
@@ -642,7 +642,7 @@
                       <h5 class="text-lg font-medium text-energy-gold mb-3">Figure 8: 實驗用離心電池結構</h5>
                       <div class="image-container bg-black/20 rounded-lg overflow-hidden mb-3">
                         <img
-                          src="../assets/images/032-fig8-structure-of-centrifugal-battery-used-in-experiment.webp"
+                          src="assets/images/032-fig8-structure-of-centrifugal-battery-used-in-experiment.webp"
                           alt="實驗用離心電池結構圖，展示電池各組件的配置和設計"
                           class="w-full h-auto"
                           style="background: linear-gradient(45deg, #1e293b, #334155);"
@@ -656,7 +656,7 @@
                       <h5 class="text-lg font-medium text-energy-gold mb-3">Figure 9: 離心電池製造組件</h5>
                       <div class="image-container bg-black/20 rounded-lg overflow-hidden mb-3">
                         <img
-                          src="../assets/images/033-fig9-components-of-centrifugal-battery-manufacturing.webp"
+                          src="assets/images/033-fig9-components-of-centrifugal-battery-manufacturing.webp"
                           alt="離心電池製造組件圖，詳細展示各個製造組件"
                           class="w-full h-auto"
                           style="background: linear-gradient(45deg, #1e293b, #334155);"
@@ -670,7 +670,7 @@
                       <h5 class="text-lg font-medium text-energy-gold mb-3">Figure 10: 電池設置與輸出連接實照</h5>
                       <div class="image-container bg-black/20 rounded-lg overflow-hidden mb-3">
                         <img
-                          src="../assets/images/034-fig10-photos-of-battery-setup-and-output-connections.webp"
+                          src="assets/images/034-fig10-photos-of-battery-setup-and-output-connections.webp"
                           alt="電池設置與輸出連接的實際照片"
                           class="w-full h-auto"
                           style="background: linear-gradient(45deg, #1e293b, #334155);"
@@ -684,7 +684,7 @@
                       <h5 class="text-lg font-medium text-energy-gold mb-3">Table 2: 電池直立時輸出電壓與時間關係</h5>
                       <div class="image-container bg-black/20 rounded-lg overflow-hidden mb-3">
                         <img
-                          src="../assets/images/036-table2-output-voltage-vs-time-of-battery-standing-upright.webp"
+                          src="assets/images/036-table2-output-voltage-vs-time-of-battery-standing-upright.webp"
                           alt="電池直立狀態下輸出電壓與時間關係數據表"
                           class="w-full h-auto"
                           style="background: linear-gradient(45deg, #1e293b, #334155);"
@@ -698,7 +698,7 @@
                       <h5 class="text-lg font-medium text-energy-gold mb-3">Table 3: 電池倒置時輸出電壓與時間關係</h5>
                       <div class="image-container bg-black/20 rounded-lg overflow-hidden mb-3">
                         <img
-                          src="../assets/images/037-table3-output-voltage-vs-time-of-battery-upside-down.webp"
+                          src="assets/images/037-table3-output-voltage-vs-time-of-battery-upside-down.webp"
                           alt="電池倒置狀態下輸出電壓與時間關係數據表"
                           class="w-full h-auto"
                           style="background: linear-gradient(45deg, #1e293b, #334155);"
@@ -712,7 +712,7 @@
                       <h5 class="text-lg font-medium text-energy-gold mb-3">Figure 11: 10G離心機下電池輸出電壓</h5>
                       <div class="image-container bg-black/20 rounded-lg overflow-hidden mb-3">
                         <img
-                          src="../assets/images/035-fig11-output-voltage-of-battery-under-10G-centrifuge.webp"
+                          src="assets/images/035-fig11-output-voltage-of-battery-under-10G-centrifuge.webp"
                           alt="在10G離心機環境下電池輸出電壓的測量數據"
                           class="w-full h-auto"
                           style="background: linear-gradient(45deg, #1e293b, #334155);"
@@ -761,7 +761,7 @@
                     </div>
                     <div class="timeline-content">
                       <h4 class="text-xl font-semibold text-energy-gold mb-2">托爾曼的原始發現</h4>
-                      <p class="text-gray-100">在加速度場中觀察到電解質溶液的電位差現象</p>
+                      <p class="text-gray-100">在加速度場中觀察到電解質溶液的Voltage Difference現象</p>
                     </div>
                   </div>
                   
@@ -790,7 +790,7 @@
               <div class="relative">
                 <img
                   src="../assets/images/004-tolmans-discovery-voltage-difference-of-lithium-and-potassium-iodide-solutions-under-acceleration-or-gravity.webp"
-                  alt="托爾曼發現：鋰離子和鉀離子碘化物溶液在加速度或重力下的電位差"
+                  alt="托爾曼發現：鋰離子和鉀離子碘化物溶液在加速度或重力下的Voltage Difference"
                   class="w-full rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
                   fetchpriority="high"
                 />
@@ -864,7 +864,7 @@
                 </div>
                 <h4 class="text-xl font-semibold text-electric-blue mb-3">產生穩定電場</h4>
                 <p class="text-gray-100 leading-relaxed">
-                  離子分離導致電荷重分布，自發產生指向上方的穩定電場，形成持續的電位差
+                  離子分離導致電荷重分布，自發產生指向上方的穩定電場，形成持續的Voltage Difference
                 </p>
               </div>
               
@@ -1014,7 +1014,7 @@
             <header class="text-center mb-20">
               <h3 class="text-3xl font-bold text-energy-gold mb-6">熱能轉電能的原理</h3>
               <p class="text-xl text-gray-100 max-w-4xl mx-auto">
-                深入了解重力場如何實現熱振動能量到電能的直接轉換機制
+                Learn More重力場如何實現熱振動能量到電能的直接轉換機制
               </p>
             </header>
             
@@ -1121,7 +1121,7 @@
                     <p class="text-gray-100 leading-relaxed">
                       這個過程實現了
                       <strong class="text-energy-gold">熱振動能量到電位能的直接轉換</strong>，
-                      理論計算顯示可達 72W/m³ 的能量密度。
+                      理論計算顯示可達 72W/m³ 的Energy Density。
                     </p>
                     <div class="key-point bg-plasma-purple/10 border-l-4 border-plasma-purple p-3 rounded-r-lg">
                       <p class="text-plasma-purple font-medium text-sm">
@@ -1150,8 +1150,8 @@
                 </div>
                 <div class="flow-step">
                   <div class="step-icon w-12 h-12 bg-plasma-purple text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-3">3</div>
-                  <h5 class="font-semibold text-plasma-purple mb-2">電能輸出</h5>
-                  <p class="text-gray-100 text-sm">電位差驅動外部電流產生</p>
+                  <h5 class="font-semibold text-plasma-purple mb-2">Electrical Output</h5>
+                  <p class="text-gray-100 text-sm">Voltage Difference驅動外部電流產生</p>
                 </div>
                 <div class="flow-step">
                   <div class="step-icon w-12 h-12 bg-energy-gold text-deep-space rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-3">4</div>
@@ -1160,11 +1160,11 @@
                 </div>
               </div>
               <div class="energy-equation mt-8 text-center">
-                <p class="text-gray-100 mb-2">能量轉換效率理論計算：</p>
+                <p class="text-gray-100 mb-2">能量Conversion Efficiency理論計算：</p>
                 <div class="equation bg-black/30 rounded-lg p-4 inline-block">
                   <code class="text-energy-gold text-lg">P ≈ 72 W/m³</code>
                 </div>
-                <p class="text-gray-200 text-sm mt-2">在理想條件下的能量密度輸出</p>
+                <p class="text-gray-200 text-sm mt-2">在理想條件下的Energy Density輸出</p>
               </div>
             </div>
           </div>
@@ -1178,7 +1178,7 @@
           <!-- Section Header -->
           <header class="text-center mb-20">
             <h2 id="evidence-heading" class="text-4xl md:text-5xl font-bold mb-6 text-deep-space">
-              實驗證據：三個月的穩定驗證
+              Experimental Evidence：三個月的穩定驗證
             </h2>
             <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
               透過嚴格控制的實驗環境，我們獲得了持續穩定的電流輸出數據，證實了理論的可靠性
@@ -1411,7 +1411,7 @@
                     
                   />
                   <h5 class="text-lg font-semibold text-gray-800 mb-2">電池結構設計</h5>
-                  <p class="text-gray-700 text-sm">離心式電池結構，最大化重力場效應</p>
+                  <p class="text-gray-700 text-sm">離心式電池結構，最大化Gravitational Field Effect</p>
                 </div>
                 
                 <div class="equipment-card bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow">
@@ -1538,7 +1538,7 @@
           <!-- Section Header -->
           <header class="text-center mb-20">
             <h2 id="academic-recognition-heading" class="text-4xl md:text-5xl font-bold mb-6 text-energy-gold">
-              學術認可與挑戰
+              Academic Recognition與挑戰
             </h2>
           </header>
 
@@ -1821,7 +1821,7 @@
                   <div class="text-center p-4 bg-slate-700/30 rounded-xl border border-slate-600/30">
                     <div class="text-2xl mb-2">🎓</div>
                     <h4 class="text-teal-400 font-semibold mb-1">學術機構</h4>
-                    <p class="text-sm text-gray-300">大學研究中心</p>
+                    <p class="text-sm text-gray-300">大學Research Center</p>
                   </div>
                   
                   <div class="text-center p-4 bg-slate-700/30 rounded-xl border border-slate-600/30">
@@ -1846,14 +1846,14 @@
       <section id="applications-impact" class="py-20 bg-gradient-to-br from-green-50 to-blue-50" role="region" aria-labelledby="applications-heading">
         <div class="container mx-auto max-w-7xl px-6">
           <h2 id="applications-heading" class="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-800">
-            技術應用前景
+            技術Applications
           </h2>
 
           <!-- Scientific Physics Calculator -->
           <div class="efficiency-calculator bg-white rounded-xl p-8 mb-16 shadow-lg max-w-4xl mx-auto" id="efficiency-calculator">
             <div class="text-center mb-8">
               <h3 class="text-3xl font-bold text-gray-800 mb-4">重力離子熱電轉換計算器</h3>
-              <p class="text-xl text-gray-600">基於 Chen 博士論文的真實物理模型，計算不同離子系統的功率輸出</p>
+              <p class="text-xl text-gray-600">基於 Chen 博士論文的真實物理模型，計算不同離子系統的Power Output</p>
               <p class="text-sm text-gray-500 mt-2">使用波茲曼分布和電場強度計算 (公式 1-4)</p>
             </div>
                           
@@ -1861,7 +1861,7 @@
               <!-- Scientific Performance Chart -->
               <div class="chart-panel">
                 <div class="chart-container bg-gray-50 rounded-lg p-6">
-                  <h4 class="text-lg font-semibold text-gray-800 mb-4">多離子系統功率輸出比較</h4>
+                  <h4 class="text-lg font-semibold text-gray-800 mb-4">多離子系統Power Output比較</h4>
                   <canvas id="efficiency-chart"></canvas>
                   
                 </div>
@@ -2125,7 +2125,7 @@
                           <div class="equation-display bg-gradient-to-r from-gray-50 to-purple-50 rounded-xl p-6 mb-4 border border-gray-200">
                             <div id="voltage-difference-calculator-container" data-equation="voltage-difference-calculator" class="equation-container cursor-pointer hover:bg-white/50 transition-all duration-300 p-4 rounded-lg min-h-[80px] flex items-center justify-center text-center"></div>
                           </div>
-                          <p class="text-sm text-gray-700 text-center leading-relaxed">不同質量離子分離產生的可測量電位差，實現電能輸出</p>
+                          <p class="text-sm text-gray-700 text-center leading-relaxed">不同質量離子分離產生的可測量Voltage Difference，實現Electrical Output</p>
                         </div>
                         
                         <!-- Centrifugal Acceleration -->
@@ -2166,7 +2166,7 @@
                         <div class="equation-display bg-gradient-to-r from-gray-50 to-emerald-50 rounded-xl p-6 mb-4 border border-gray-200">
                           <div id="power-density-container" data-equation="power-density" class="equation-container cursor-pointer hover:bg-white/50 transition-all duration-300 p-4 rounded-lg min-h-[80px] flex items-center justify-center text-center"></div>
                         </div>
-                        <p class="text-sm text-gray-700 text-center leading-relaxed">單位體積的功率輸出計算，評估系統效能</p>
+                        <p class="text-sm text-gray-700 text-center leading-relaxed">單位體積的Power Output計算，評估系統效能</p>
                       </div>
                       
                       <!-- Max Rotational Speed -->
@@ -2243,7 +2243,7 @@
                             <span class="text-white text-2xl">⚖️</span>
                           </div>
                           <h7 class="text-lg font-bold text-purple-800 mb-3 block">最佳化參數</h7>
-                          <p class="text-sm text-purple-700 leading-relaxed">結構尺寸與轉速的最佳化配置，平衡功率輸出與安全性考量</p>
+                          <p class="text-sm text-purple-700 leading-relaxed">結構尺寸與轉速的最佳化配置，平衡Power Output與安全性考量</p>
                           <div class="mt-4 p-4 bg-violet-50 rounded-lg">
                             <div class="text-xs text-violet-600 font-semibold">設計準則</div>
                             <div class="text-xs text-violet-700 mt-1">轉速 ∝ √(強度/密度)<br>功率 ∝ 質量差²</div>
@@ -2286,7 +2286,7 @@
                 <h4 class="text-lg font-semibold text-gray-800 mb-2">功率密度</h4>
                 <div class="spec-value">72</div>
                 <div class="spec-unit">瓦/立方公尺</div>
-                <p class="text-sm text-gray-700 mt-2">在現有材料條件下的基礎功率輸出</p>
+                <p class="text-sm text-gray-700 mt-2">在現有材料條件下的基礎Power Output</p>
               </div>
               
               <div class="tech-spec-card rounded-xl p-6 text-center">
@@ -2407,7 +2407,7 @@
                   </li>
                   <li class="flex items-center space-x-3">
                     <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
-                    <span>兆瓦級功率輸出</span>
+                    <span>兆瓦級Power Output</span>
                   </li>
                   <li class="flex items-center space-x-3">
                     <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
@@ -2713,7 +2713,7 @@
       <section id="contact" class="py-20 px-6 bg-black/40" role="region" aria-labelledby="contact-heading">
         <div class="container mx-auto max-w-4xl text-center">
           <h2 id="contact-heading" class="text-4xl md:text-5xl font-bold mb-8 text-energy-gold">聯絡我們</h2>
-          <p class="text-xl text-gray-100 mb-12">對我們的技術感興趣？歡迎與我們的研究團隊聯繫</p>
+          <p class="text-xl text-gray-100 mb-12">對我們的技術感興趣？歡迎與我們的Research Team聯繫</p>
 
           <div class="grid md:grid-cols-2 gap-12">
             <div class="space-y-6">
@@ -2750,7 +2750,7 @@
           
           <!-- Company Information -->
           <div class="lg:col-span-2">
-            <h3 class="text-2xl font-bold text-energy-gold mb-4">重力離子熱電技術</h3>
+            <h3 class="text-2xl font-bold text-energy-gold mb-4">Gravity Ion Thermoelectric Technology</h3>
             <p class="text-gray-200 mb-6 leading-relaxed">
               致力於推動能源轉換技術的革命性發展，挑戰傳統物理定律，為人類的可持續發展和地球環境保護貢獻力量。
             </p>
@@ -2780,37 +2780,37 @@
                 <li>
                   <a href="#hero" class="text-gray-200 hover:text-electric-blue transition-colors duration-300 flex items-center">
                     <span class="w-1 h-1 bg-energy-gold rounded-full mr-2"></span>
-                    首頁
+                    Home
                   </a>
                 </li>
                 <li>
                   <a href="#scientific-breakthrough" class="text-gray-200 hover:text-electric-blue transition-colors duration-300 flex items-center">
                     <span class="w-1 h-1 bg-energy-gold rounded-full mr-2"></span>
-                    科學突破
+                    Scientific Breakthrough
                   </a>
                 </li>
                 <li>
                   <a href="#experimental-evidence" class="text-gray-200 hover:text-electric-blue transition-colors duration-300 flex items-center">
                     <span class="w-1 h-1 bg-energy-gold rounded-full mr-2"></span>
-                    實驗證據
+                    Experimental Evidence
                   </a>
                 </li>
                 <li>
                   <a href="#applications-impact" class="text-gray-200 hover:text-electric-blue transition-colors duration-300 flex items-center">
                     <span class="w-1 h-1 bg-energy-gold rounded-full mr-2"></span>
-                    應用前景
+                    Applications
                   </a>
                 </li>
                 <li>
                   <a href="#academic-recognition" class="text-gray-200 hover:text-electric-blue transition-colors duration-300 flex items-center">
                     <span class="w-1 h-1 bg-energy-gold rounded-full mr-2"></span>
-                    學術認可
+                    Academic Recognition
                   </a>
                 </li>
                 <li>
                   <a href="#call-to-action" class="text-gray-200 hover:text-electric-blue transition-colors duration-300 flex items-center">
                     <span class="w-1 h-1 bg-energy-gold rounded-full mr-2"></span>
-                    行動呼籲
+                    Call to Action
                   </a>
                 </li>
               </ul>
@@ -2856,7 +2856,7 @@
 
           <!-- Contact Information -->
           <div>
-            <h4 class="text-lg font-semibold text-white mb-4">聯絡資訊</h4>
+            <h4 class="text-lg font-semibold text-white mb-4">Contact Information</h4>
             <address class="text-gray-200 not-italic space-y-3">
               <div class="flex items-start space-x-3">
                 <svg class="w-5 h-5 text-energy-gold mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
@@ -2874,8 +2874,8 @@
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                 </svg>
                 <div>
-                  <p class="text-sm text-gray-300">研究中心</p>
-                  <p>台灣 新竹</p>
+                  <p class="text-sm text-gray-300">Research Center</p>
+                  <p>Hsinchu, Taiwan</p>
                 </div>
               </div>
               <div class="flex items-start space-x-3">
