@@ -7,8 +7,12 @@
 class SocialSharing {
     constructor() {
         this.shareData = {
-            title: '重力離子熱電技術 - 挑戰熱力學第二定律的革命性發現',
-            description: '無燃料、無污染的綠色能源新紀元。探索突破性的物理發現，顛覆傳統熱力學定律。',
+            get title() {
+                return Utils.Language.t('social.title');
+            },
+            get description() {
+                return Utils.Language.t('social.description');
+            },
             url: window.location.href,
             hashtags: ['重力離子', '熱電技術', '綠色能源', '物理突破', 'GravityIon', 'Thermoelectric'],
             image: window.location.origin + '/assets/images/001-energy-flows-from-hot-to-cold-region.webp'
@@ -258,11 +262,12 @@ class SocialSharing {
      */
     showCopySuccess(button) {
         const originalContent = button.innerHTML;
+        const copiedText = Utils.Language.t('social.copied');
         button.innerHTML = `
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
             </svg>
-            <span>已複製!</span>
+            <span>${copiedText}</span>
         `;
         button.classList.add('bg-green-500', 'hover:bg-green-600');
 
@@ -351,7 +356,9 @@ class SocialSharing {
         const shareCountElements = document.querySelectorAll('#share-count, #share-counter');
         shareCountElements.forEach(element => {
             if (element.id === 'share-count') {
-                element.textContent = `已分享：${this.shareCount} 次`;
+                element.textContent = Utils.Language.t('social.shareCount', { 
+                    count: this.shareCount 
+                });
             } else {
                 element.textContent = this.shareCount.toString();
             }
