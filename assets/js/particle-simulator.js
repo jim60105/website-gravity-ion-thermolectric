@@ -56,9 +56,9 @@ class InteractiveParticleSimulator {
                 description: '最佳效能系統',
                 color: { anion: '#FFD700', cation: '#00BFFF' }
             },
-            'LiCl': {
-                name: '氯化鋰 (LiCl)',
-                anion: 'Cl-',
+            'LiI': {
+                name: '碘化鋰 (LiI)',
+                anion: 'I-',
                 cation: 'Li+',
                 description: 'Tolman 經典系統',
                 color: { anion: '#90EE90', cation: '#FF6347' }
@@ -359,7 +359,7 @@ class InteractiveParticleSimulator {
                             <div class="comparison-grid grid grid-cols-2 gap-4 mt-3 text-xs">
                                 <div>
                                     <div class="text-energy-gold">Tolman 條件</div>
-                                    <div class="text-gray-400">LiCl系統, 低速旋轉</div>
+                                    <div class="text-gray-400">KCl系統, 低速旋轉</div>
                                 </div>
                                 <div>
                                     <div class="text-energy-gold">Chen 條件</div>
@@ -395,12 +395,12 @@ class InteractiveParticleSimulator {
                                     <div class="text-gray-400">最佳效能</div>
                                 </div>
                                 <div class="text-center">
-                                    <div class="text-energy-gold font-semibold">LiCl 系統</div>
+                                    <div class="text-energy-gold font-semibold">KCl 系統</div>
                                     <div class="text-blue-400">4.514 W/m³</div>
                                     <div class="text-gray-400">穩定可靠</div>
                                 </div>
                                 <div class="text-center">
-                                    <div class="text-energy-gold font-semibold">KCl 系統</div>
+                                    <div class="text-energy-gold font-semibold">KI 系統</div>
                                     <div class="text-purple-400">0.282 W/m³</div>
                                     <div class="text-gray-400">安全穩定</div>
                                 </div>

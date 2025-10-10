@@ -282,8 +282,8 @@ class PhysicsEngine {
     calculateIonSystemPerformance(structure = this.CONSTANTS.DEFAULT_STRUCTURE) {
         const systems = [
             { anion: 'I-', cation: 'H+', name: 'HI', conductivity: 0.85 },
-            { anion: 'Cl-', cation: 'Li+', name: 'LiCl', conductivity: 0.7 },
-            { anion: 'Cl-', cation: 'K+', name: 'KCl', conductivity: 0.6 }
+            { anion: 'I-', cation: 'Li+', name: 'LiI', conductivity: 0.7 },
+            { anion: 'I-', cation: 'K+', name: 'KI', conductivity: 0.6 }
         ];
 
         return systems.map(system => {

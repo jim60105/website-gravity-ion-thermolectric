@@ -32,11 +32,11 @@ class EfficiencyCalculator {
                 name: '氫碘酸',
                 description: '最高效率系統，適用於大功率應用'
             },
-            'LiCl': {
-                anion: 'Cl-',
+            'LiI': {
+                anion: 'I-',
                 cation: 'Li+',
                 conductivity: 0.7,
-                name: '氯化鋰',
+                name: '碘化鋰',
                 description: 'Tolman 1910 實驗驗證，歷史重要性'
             },
             'KCl': {
@@ -201,7 +201,7 @@ class EfficiencyCalculator {
             const perfMap = {};
             perfArray.forEach(p => {
                 // Normalize naming to match UI keys
-                // p.name expected: 'HI' | 'LiCl' | 'KCl'
+                // p.name expected: 'HI' | 'LiI' | 'KI' | 'KCl'
                 perfMap[p.name] = {
                     // Expose a friendly 'efficiency' alias (W/m^3 combined)
                     efficiency: p.powerDensity ?? p.powerDensityCombined ?? p.powerDensityLiquid ?? 0,
@@ -462,7 +462,7 @@ class EfficiencyCalculator {
                     <div class="text-sm text-indigo-700">
                         ${advanced.ionSystemPerformance ? `
                             <p><strong>HI 系統:</strong> ${advanced.ionSystemPerformance.HI?.efficiency?.toFixed(2) || 'N/A'} W/m³</p>
-                            <p><strong>LiCl 系統:</strong> ${advanced.ionSystemPerformance.LiCl?.efficiency?.toFixed(2) || 'N/A'} W/m³</p>
+                            <p><strong>LiI 系統:</strong> ${advanced.ionSystemPerformance.LiI?.efficiency?.toFixed(2) || 'N/A'} W/m³</p>
                             <p><strong>KCl 系統:</strong> ${advanced.ionSystemPerformance.KCl?.efficiency?.toFixed(2) || 'N/A'} W/m³</p>
                         ` : '<p>計算進行中...</p>'}
                     </div>
@@ -689,8 +689,8 @@ class EfficiencyCalculator {
         // Generate data for different ion systems
         const ionSystems = [
             { anion: 'I-', cation: 'H+', name: 'HI (氫碘酸)', color: '#059669', conductivity: 0.85 },
-            { anion: 'Cl-', cation: 'Li+', name: 'LiCl (氯化鋰)', color: '#0EA5E9', conductivity: 0.7 },
-            { anion: 'Cl-', cation: 'K+', name: 'KCl (氯化鉀)', color: '#8B5CF6', conductivity: 0.6 }
+            { anion: 'I-', cation: 'Li+', name: 'LiI (碘化鋰)', color: '#0EA5E9', conductivity: 0.7 },
+            { anion: 'I-', cation: 'K+', name: 'KI (碘化鉀)', color: '#8B5CF6', conductivity: 0.6 }
         ];
 
         const datasets = ionSystems.map(system => {
@@ -772,7 +772,7 @@ class EfficiencyCalculator {
         if (!ionSystem) {
             const systems = {
                 'HI': { anion: 'I-', cation: 'H+', conductivity: 0.85 },
-                'LiCl': { anion: 'Cl-', cation: 'Li+', conductivity: 0.7 },
+                'LiI': { anion: 'I-', cation: 'Li+', conductivity: 0.7 },
                 'KCl': { anion: 'Cl-', cation: 'K+', conductivity: 0.6 }
             };
             ionSystem = systems[this.currentIonSystem] || systems['HI'];
@@ -872,7 +872,7 @@ class EfficiencyCalculator {
     updateIonSystemDisplay(performanceData) {
         // Update if performance display elements exist
         this.updateDisplay('hi-efficiency', performanceData.HI?.efficiency || 0);
-        this.updateDisplay('licl-efficiency', performanceData.LiCl?.efficiency || 0);
+        this.updateDisplay('lii-efficiency', performanceData.LiI?.efficiency || 0);
         this.updateDisplay('kcl-efficiency', performanceData.KCl?.efficiency || 0);
     }
 
