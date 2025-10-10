@@ -138,7 +138,8 @@ class ExperimentSimulation {
 
     if (fieldDirection) {
       fieldDirection.textContent = data.direction;
-      fieldDirection.className = `value text-2xl font-bold ${data.direction === '向上' ? 'text-plasma-purple' : 'text-orange-600'}`;
+      const isUpward = data.direction === Utils.Language.t('experiment.upward');
+      fieldDirection.className = `value text-2xl font-bold ${isUpward ? 'text-plasma-purple' : 'text-orange-600'}`;
     }
 
     // Add animation effect to updated values

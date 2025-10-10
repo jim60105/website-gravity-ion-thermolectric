@@ -14,7 +14,7 @@ class SocialSharing {
                 return Utils.Language.t('social.description');
             },
             url: window.location.href,
-            hashtags: ['重力離子', '熱電技術', '綠色能源', '物理突破', 'GravityIon', 'Thermoelectric'],
+            hashtags: ['GravityIon', 'Thermoelectric', 'GreenEnergy', 'PhysicsBreakthrough', 'CleanEnergy', 'Innovation'],
             image: window.location.origin + '/assets/images/001-energy-flows-from-hot-to-cold-region.webp'
         };
         this.shareCount = this.getStoredShareCount();
@@ -153,8 +153,8 @@ class SocialSharing {
         modal.innerHTML = `
             <div class="bg-white rounded-lg p-8 max-w-sm w-full mx-4 text-center">
                 <div class="mb-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">微信分享</h3>
-                    <p class="text-gray-600 text-sm">掃描 QR Code 在微信中分享</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">WeChat Share</h3>
+                    <p class="text-gray-600 text-sm">Scan QR Code to share on WeChat</p>
                 </div>
                 
                 <div class="mb-6">
@@ -162,21 +162,21 @@ class SocialSharing {
                 </div>
                 
                 <div class="mb-6">
-                    <p class="text-sm text-gray-600 mb-2">或複製連結手動分享：</p>
+                    <p class="text-sm text-gray-600 mb-2">Or copy link to share manually:</p>
                     <div class="flex">
                         <input type="text" value="${this.shareData.url}" 
                                class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md text-sm" 
                                readonly>
-                        <button onclick="this.previousElementSibling.select(); document.execCommand('copy'); this.textContent='已複製!'" 
+                        <button onclick="this.previousElementSibling.select(); document.execCommand('copy'); this.textContent='Copied!'" 
                                 class="px-4 py-2 bg-green-500 text-white rounded-r-md text-sm hover:bg-green-600">
-                            複製
+                            Copy
                         </button>
                     </div>
                 </div>
                 
                 <button onclick="this.closest('.fixed').remove()" 
                         class="bg-gray-300 text-gray-700 py-2 px-6 rounded-md hover:bg-gray-400 transition-colors">
-                    關閉
+                    Close
                 </button>
             </div>
         `;
@@ -286,7 +286,7 @@ class SocialSharing {
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
-            <span>複製失敗</span>
+            <span>Copy Failed</span>
         `;
         button.classList.add('bg-red-500', 'hover:bg-red-600');
 
@@ -329,7 +329,7 @@ class SocialSharing {
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                 </svg>
-                <span>感謝您分享重力離子技術！</span>
+                <span>Thank you for sharing Gravity Ion Technology!</span>
             </div>
         `;
 

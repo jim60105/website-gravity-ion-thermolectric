@@ -115,7 +115,7 @@ class RoadmapTimeline {
                         <div class="flex items-center justify-between mb-2">
                             <h3 class="text-2xl font-bold text-gray-800">${milestone.year} - ${milestone.title}</h3>
                             <div class="progress-indicator text-sm text-gray-600">
-                                進度: ${milestone.progress}%
+                                Progress: ${milestone.progress}%
                             </div>
                         </div>
                         <p class="text-gray-800 text-lg">${milestone.description}</p>
@@ -132,7 +132,7 @@ class RoadmapTimeline {
                     
                     <!-- Achievements -->
                     <div class="achievements">
-                        <h4 class="text-lg font-semibold text-gray-800 mb-3">關鍵成果</h4>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Key Achievements</h4>
                         <ul class="space-y-2">
                             ${milestone.achievements.map(achievement => `
                                 <li class="flex items-center space-x-3 text-gray-800">

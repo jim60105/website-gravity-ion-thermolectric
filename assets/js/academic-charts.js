@@ -39,15 +39,20 @@ class AcademicCharts {
     }
 
     // Response distribution data
+    const isZh = Utils.Language.isZh();
     this.chartData.responseDistribution = {
-      labels: ['正面回應', '建設性質疑', '挑戰反駁', '無回應'],
+      labels: isZh 
+        ? ['正面回應', '建設性質疑', '挑戰反駁', '無回應']
+        : ['Positive Response', 'Constructive Inquiry', 'Challenge & Rebuttal', 'No Response'],
       data: [23, 67, 37, 4873],
       colors: ['#10b981', '#f59e0b', '#ef4444', '#6b7280']
     };
 
     // Geographic distribution
     this.chartData.geographicDistribution = {
-      labels: ['亞洲', '歐洲', '北美', '其他'],
+      labels: isZh 
+        ? ['亞洲', '歐洲', '北美', '其他']
+        : ['Asia', 'Europe', 'North America', 'Others'],
       data: [45, 30, 20, 5],
       colors: ['#8b5cf6', '#06b6d4', '#f59e0b', '#84cc16']
     };
@@ -187,7 +192,8 @@ class AcademicCharts {
     ctx.fillStyle = '#9ca3af';
     ctx.font = '12px sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText('下載趨勢', width / 2, 20);
+    const chartTitle = Utils.Language.isZh() ? '下載趨勢' : 'Download Trend';
+    ctx.fillText(chartTitle, width / 2, 20);
   }
 
   // Update charts with new data

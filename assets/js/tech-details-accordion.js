@@ -211,12 +211,14 @@ class TechDetailsAccordion {
 
         const errorMessage = document.createElement('div');
         errorMessage.className = 'video-error flex items-center justify-center h-full text-gray-400 text-sm';
+        const loadFailedText = Utils.Language.isZh() ? '影片載入失敗' : 'Video failed to load';
+        const watchOriginalText = Utils.Language.isZh() ? '點此觀看原始影片' : 'Click to watch original video';
         errorMessage.innerHTML = `
             <div class="text-center">
                 <div class="mb-2">⚠️</div>
-                <div>影片載入失敗</div>
+                <div>${loadFailedText}</div>
                 <a href="https://youtu.be/NA_FsBknLV0" target="_blank" class="text-energy-gold hover:underline text-xs mt-1 block">
-                    點此觀看原始影片
+                    ${watchOriginalText}
                 </a>
             </div>
         `;

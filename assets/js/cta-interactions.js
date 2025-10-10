@@ -109,7 +109,8 @@ class CTAInteractions {
         });
 
         // Show success message
-        this.showSuccessMessage(button, '論文下載已開始');
+        const downloadMessage = Utils.Language.isZh() ? '論文下載已開始' : 'Paper download started';
+        this.showSuccessMessage(button, downloadMessage);
 
         console.info('Paper download initiated', { url: paperUrl });
     }
