@@ -288,18 +288,26 @@ class AccessibilityEnhancer {
 
         // Scientific diagrams
         if (filename.includes('energy') || filename.includes('thermodynamic')) {
-            return `${contextName} 相關的科學示意圖`;
+            return Utils.Language.isZh() 
+                ? `${contextName} 相關的科學示意圖`
+                : `${contextName} scientific diagram`;
         }
 
         if (filename.includes('experiment') || filename.includes('test')) {
-            return `${contextName} 實驗設備圖片`;
+            return Utils.Language.isZh()
+                ? `${contextName} 實驗設備圖片`
+                : `${contextName} experimental equipment image`;
         }
 
         if (filename.includes('chart') || filename.includes('graph')) {
-            return `${contextName} 數據圖表`;
+            return Utils.Language.isZh()
+                ? `${contextName} 數據圖表`
+                : `${contextName} data chart`;
         }
 
-        return contextName ? `${contextName} 相關圖片` : '科學研究相關圖片';
+        return contextName 
+            ? Utils.Language.t('accessibility.relatedImage', { context: contextName })
+            : Utils.Language.t('accessibility.defaultImageAlt');
     }
 
     /**
@@ -329,15 +337,21 @@ class AccessibilityEnhancer {
      */
     createContextDescription(element) {
         if (element.classList.contains('particle-simulator')) {
-            return '這是一個互動式粒子模擬器，您可以調整重力和熱振動參數來觀察離子分離效果';
+            return Utils.Language.isZh() 
+                ? '這是一個互動式粒子模擬器，您可以調整重力和熱振動參數來觀察離子分離效果'
+                : 'This is an interactive particle simulator where you can adjust gravity and thermal vibration parameters to observe ion separation effects';
         }
 
         if (element.classList.contains('chart-container')) {
-            return '這是一個互動式圖表，顯示實驗數據和研究結果';
+            return Utils.Language.isZh()
+                ? '這是一個互動式圖表，顯示實驗數據和研究結果'
+                : 'This is an interactive chart displaying experimental data and research results';
         }
 
         if (element.classList.contains('slider')) {
-            return '使用左右箭頭鍵或滑鼠拖拽來調整數值';
+            return Utils.Language.isZh()
+                ? '使用左右箭頭鍵或滑鼠拖拽來調整數值'
+                : 'Use left/right arrow keys or mouse drag to adjust values';
         }
 
         return null;
@@ -354,7 +368,8 @@ class AccessibilityEnhancer {
                 const heading = table.closest('section')?.querySelector('h1, h2, h3, h4, h5, h6');
                 if (heading) {
                     const caption = document.createElement('caption');
-                    caption.textContent = `${heading.textContent} 數據表格`;
+                    const captionText = Utils.Language.isZh() ? '數據表格' : 'Data Table';
+                    caption.textContent = `${heading.textContent} ${captionText}`;
                     caption.className = 'sr-only';
                     table.insertBefore(caption, table.firstChild);
                 }
@@ -512,7 +527,8 @@ class AccessibilityEnhancer {
             // Add required field indicators
             if (input.hasAttribute('required')) {
                 const currentLabel = input.getAttribute('aria-label') || '';
-                input.setAttribute('aria-label', `${currentLabel} (必填)`);
+                const requiredText = Utils.Language.isZh() ? '(必填)' : '(required)';
+                input.setAttribute('aria-label', `${currentLabel} ${requiredText}`);
                 input.setAttribute('aria-required', 'true');
             }
 
@@ -522,7 +538,9 @@ class AccessibilityEnhancer {
                 const descElement = document.createElement('div');
                 descElement.id = descId;
                 descElement.className = 'sr-only';
-                descElement.textContent = `輸入提示：${input.placeholder}`;
+                descElement.textContent = Utils.Language.t('accessibility.inputHint', { 
+                    placeholder: input.placeholder 
+                });
                 input.parentNode.insertBefore(descElement, input.nextSibling);
                 input.setAttribute('aria-describedby', descId);
             }
@@ -549,34 +567,34 @@ class AccessibilityEnhancer {
         // Generate based on input type
         switch (type) {
             case 'email':
-                return '電子郵件地址';
+                return Utils.Language.isZh() ? '電子郵件地址' : 'Email address';
             case 'password':
-                return '密碼';
+                return Utils.Language.isZh() ? '密碼' : 'Password';
             case 'tel':
-                return '電話號碼';
+                return Utils.Language.isZh() ? '電話號碼' : 'Phone number';
             case 'url':
-                return '網址';
+                return Utils.Language.isZh() ? '網址' : 'URL';
             case 'search':
-                return '搜尋';
+                return Utils.Language.isZh() ? '搜尋' : 'Search';
             case 'number':
-                return placeholder || '數值輸入';
+                return placeholder || (Utils.Language.isZh() ? '數值輸入' : 'Number input');
             case 'range':
-                return placeholder || '範圍調整';
+                return placeholder || (Utils.Language.isZh() ? '範圍調整' : 'Range adjustment');
             case 'date':
-                return '日期';
+                return Utils.Language.isZh() ? '日期' : 'Date';
             case 'time':
-                return '時間';
+                return Utils.Language.isZh() ? '時間' : 'Time';
             case 'checkbox':
-                return '核取方塊';
+                return Utils.Language.isZh() ? '核取方塊' : 'Checkbox';
             case 'radio':
-                return '選項';
+                return Utils.Language.isZh() ? '選項' : 'Option';
             case 'select':
-                return '選擇選項';
+                return Utils.Language.isZh() ? '選擇選項' : 'Select option';
             case 'textarea':
-                return placeholder || '文字輸入區域';
+                return placeholder || (Utils.Language.isZh() ? '文字輸入區域' : 'Text input area');
             case 'text':
             default:
-                return placeholder || name || '文字輸入';
+                return placeholder || name || Utils.Language.t('accessibility.defaultInput');
         }
     }
 
@@ -586,14 +604,22 @@ class AccessibilityEnhancer {
     generateButtonLabel(button) {
         const context = button.closest('section, article, div[class*="card"]');
         const heading = context?.querySelector('h1, h2, h3, h4, h5, h6');
-        const contextName = heading?.textContent || '內容';
+        const contextName = heading?.textContent || Utils.Language.t('accessibility.contentArea');
 
-        if (button.classList.contains('share')) {return `分享 ${contextName}`;}
-        if (button.classList.contains('download')) {return `下載 ${contextName}`;}
-        if (button.classList.contains('close')) {return `關閉 ${contextName}`;}
-        if (button.classList.contains('menu')) {return '開啟選單';}
+        if (button.classList.contains('share')) {
+            return Utils.Language.isZh() ? `分享 ${contextName}` : `Share ${contextName}`;
+        }
+        if (button.classList.contains('download')) {
+            return Utils.Language.isZh() ? `下載 ${contextName}` : `Download ${contextName}`;
+        }
+        if (button.classList.contains('close')) {
+            return Utils.Language.isZh() ? `關閉 ${contextName}` : `Close ${contextName}`;
+        }
+        if (button.classList.contains('menu')) {
+            return Utils.Language.isZh() ? '開啟選單' : 'Open menu';
+        }
 
-        return '按鈕';
+        return Utils.Language.isZh() ? '按鈕' : 'Button';
     }
 
     /**
@@ -610,19 +636,26 @@ class AccessibilityEnhancer {
             const target = document.getElementById(targetId);
             if (target) {
                 const targetHeading = target.querySelector('h1, h2, h3, h4, h5, h6');
-                return `前往 ${targetHeading?.textContent || targetId}`;
+                const targetText = targetHeading?.textContent || targetId;
+                return Utils.Language.isZh() ? `前往 ${targetText}` : `Go to ${targetText}`;
             }
         }
 
         if (href?.includes('youtube.com') || href?.includes('youtu.be')) {
-            return `觀看影片：${contextName}`;
+            return Utils.Language.isZh() 
+                ? `觀看影片：${contextName}` 
+                : `Watch video: ${contextName}`;
         }
 
         if (href?.includes('.pdf') || href?.includes('vixra.org')) {
-            return `下載文件：${contextName}`;
+            return Utils.Language.isZh() 
+                ? `下載文件：${contextName}` 
+                : `Download document: ${contextName}`;
         }
 
-        return contextName ? `閱讀更多：${contextName}` : '連結';
+        return contextName 
+            ? Utils.Language.t('accessibility.readMoreLink', { context: contextName })
+            : Utils.Language.t('accessibility.defaultLink');
     }
 
     /**
@@ -695,14 +728,20 @@ class AccessibilityEnhancer {
     setupAnnouncementSystem() {
         // Announce page load completion
         window.addEventListener('load', () => {
-            this.announceToScreenReader('頁面載入完成。重力離子熱電技術網站已準備就緒。');
+            const loadMessage = Utils.Language.isZh() 
+                ? '頁面載入完成。重力離子熱電技術網站已準備就緒。'
+                : 'Page loaded. Gravity Ion Thermoelectric Technology website is ready.';
+            this.announceToScreenReader(loadMessage);
         });
 
         // Announce navigation changes
         if (typeof NavigationController !== 'undefined') {
             document.addEventListener('navigationchange', (e) => {
-                const sectionName = e.detail.sectionName || '內容區塊';
-                this.announceToScreenReader(`已前往 ${sectionName}`);
+                const sectionName = e.detail.sectionName || Utils.Language.t('accessibility.contentBlock');
+                const message = Utils.Language.isZh() 
+                    ? `已前往 ${sectionName}` 
+                    : `Navigated to ${sectionName}`;
+                this.announceToScreenReader(message);
             });
         }
     }
@@ -715,7 +754,10 @@ class AccessibilityEnhancer {
         forms.forEach(form => {
             // Add form submission feedback
             form.addEventListener('submit', (_e) => {
-                this.announceToScreenReader('表單已提交，正在處理中...', 'assertive');
+                const submitMessage = Utils.Language.isZh() 
+                    ? '表單已提交，正在處理中...'
+                    : 'Form submitted, processing...';
+                this.announceToScreenReader(submitMessage, 'assertive');
             });
 
             // Enhance error handling
@@ -731,7 +773,10 @@ class AccessibilityEnhancer {
         inputs.forEach(input => {
             input.addEventListener('invalid', (_e) => {
                 const label = this.getInputLabel(input);
-                this.announceToScreenReader(`${label} 輸入有誤，請檢查`, 'assertive');
+                const errorMessage = Utils.Language.isZh() 
+                    ? `${label} 輸入有誤，請檢查`
+                    : `${label} input is invalid, please check`;
+                this.announceToScreenReader(errorMessage, 'assertive');
             });
         });
     }
@@ -746,7 +791,7 @@ class AccessibilityEnhancer {
         const ariaLabel = input.getAttribute('aria-label');
         if (ariaLabel) {return ariaLabel;}
 
-        return input.placeholder || '輸入欄位';
+        return input.placeholder || (Utils.Language.isZh() ? '輸入欄位' : 'Input field');
     }
 
     /**

@@ -10,33 +10,65 @@ class RoadmapTimeline {
         this.milestones = [
             {
                 year: '20??',
-                title: '小規模驗證',
-                description: '完成實驗室原型驗證，建立基礎生產流程',
-                achievements: ['實驗室原型完成', '效率參數確認', '專利申請完成'],
+                get title() {
+                    return Utils.Language.isZh() ? '小規模驗證' : 'Small-Scale Validation';
+                },
+                get description() {
+                    return Utils.Language.t('roadmap.phase1.description');
+                },
+                get achievements() {
+                    return Utils.Language.isZh() 
+                        ? ['實驗室原型完成', '效率參數確認', '專利申請完成']
+                        : ['Lab prototype completed', 'Efficiency parameters confirmed', 'Patent application filed'];
+                },
                 progress: 75,
                 color: '#059669'
             },
             {
                 year: '20??',
-                title: '商業化原型',
-                description: '開發可商業化原型，進行市場測試',
-                achievements: ['原型機量產', '市場驗證完成', '合作伙伴建立'],
+                get title() {
+                    return Utils.Language.isZh() ? '商業化原型' : 'Commercial Prototype';
+                },
+                get description() {
+                    return Utils.Language.t('roadmap.phase2.description');
+                },
+                get achievements() {
+                    return Utils.Language.isZh() 
+                        ? ['原型機量產', '市場驗證完成', '合作伙伴建立']
+                        : ['Prototype mass production', 'Market validation complete', 'Partners established'];
+                },
                 progress: 45,
                 color: '#0EA5E9'
             },
             {
                 year: '20??',
-                title: '大規模部署',
-                description: '實現規模化生產，開始商業部署',
-                achievements: ['工廠建設完成', '產品標準化', '市場占有率5%'],
+                get title() {
+                    return Utils.Language.isZh() ? '大規模部署' : 'Large-Scale Deployment';
+                },
+                get description() {
+                    return Utils.Language.t('roadmap.phase3.description');
+                },
+                get achievements() {
+                    return Utils.Language.isZh() 
+                        ? ['工廠建設完成', '產品標準化', '市場占有率5%']
+                        : ['Factory construction complete', 'Product standardization', '5% market share'];
+                },
                 progress: 20,
                 color: '#8B5CF6'
             },
             {
                 year: '20??',
-                title: '全球推廣',
-                description: '全球範圍推廣應用，成為主流能源技術',
-                achievements: ['全球市場進入', '技術標準確立', '市場占有率25%'],
+                get title() {
+                    return Utils.Language.isZh() ? '全球推廣' : 'Global Expansion';
+                },
+                get description() {
+                    return Utils.Language.t('roadmap.phase4.description');
+                },
+                get achievements() {
+                    return Utils.Language.isZh() 
+                        ? ['全球市場進入', '技術標準確立', '市場占有率25%']
+                        : ['Global market entry', 'Technical standards established', '25% market share'];
+                },
                 progress: 5,
                 color: '#F59E0B'
             }
@@ -83,7 +115,7 @@ class RoadmapTimeline {
                         <div class="flex items-center justify-between mb-2">
                             <h3 class="text-2xl font-bold text-gray-800">${milestone.year} - ${milestone.title}</h3>
                             <div class="progress-indicator text-sm text-gray-600">
-                                進度: ${milestone.progress}%
+                                Progress: ${milestone.progress}%
                             </div>
                         </div>
                         <p class="text-gray-800 text-lg">${milestone.description}</p>
@@ -100,7 +132,7 @@ class RoadmapTimeline {
                     
                     <!-- Achievements -->
                     <div class="achievements">
-                        <h4 class="text-lg font-semibold text-gray-800 mb-3">關鍵成果</h4>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-3">Key Achievements</h4>
                         <ul class="space-y-2">
                             ${milestone.achievements.map(achievement => `
                                 <li class="flex items-center space-x-3 text-gray-800">

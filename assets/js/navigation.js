@@ -338,7 +338,10 @@ class NavigationController {
         if (activeSection) {
             const sectionTitle = activeSection.element.querySelector('h1, h2, h3')?.textContent;
             if (sectionTitle) {
-                document.title = `${sectionTitle} | 重力離子熱電技術`;
+                const siteTitle = Utils.Language.isZh() 
+                    ? '重力離子熱電技術' 
+                    : 'Gravity Ion Thermoelectric Technology';
+                document.title = `${sectionTitle} | ${siteTitle}`;
             }
         }
     }

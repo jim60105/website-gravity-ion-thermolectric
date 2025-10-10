@@ -33,6 +33,9 @@ class GravityIonApp {
         this.isInitialized = false;
         this.components = new Map();
         this.eventListeners = new Map();
+        
+        // Initialize language system
+        this.lang = window.Lang;
 
         // Bind methods
         this.handleResize = Utils.Performance.debounce(this.handleResize.bind(this), 250);
@@ -48,6 +51,7 @@ class GravityIonApp {
     async init() {
         try {
             console.info(`Initializing ${AppConfig.name} v${AppConfig.version}`);
+            console.info(`Language: ${this.lang ? this.lang.getCurrentLang() : 'zh'}`);
 
             // Wait for DOM to be ready
             if (document.readyState === 'loading') {
@@ -363,18 +367,20 @@ class GravityIonApp {
         try {
             // Show loading state
             if (loadingAnimations) {
-                loadingAnimations.show(form, { message: '發送中...' });
+                loadingAnimations.show(form, { 
+                    message: Utils.Language.t('notifications.formSending') 
+                });
             }
 
             // Simulate form submission (replace with actual API call)
             await new Promise(resolve => setTimeout(resolve, 2000));
 
             // Show success message
-            this.showNotification('訊息已成功發送！', 'success');
+            this.showNotification('notifications.formSuccess', 'success');
             form.reset();
         } catch (error) {
             console.error('Form submission error:', error);
-            this.showNotification('發送失敗，請稍後再試。', 'error');
+            this.showNotification('notifications.formError', 'error');
         } finally {
             // Hide loading state
             if (loadingAnimations) {
@@ -576,10 +582,15 @@ class GravityIonApp {
 
     /**
      * Show notification to user
-     * @param {string} message - Notification message
+     * @param {string} messageKey - Translation key or direct message
      * @param {string} type - Notification type (success, error, info)
      */
-    showNotification(message, type = 'info') {
+    showNotification(messageKey, type = 'info') {
+        // Translate message if it's a key
+        const message = messageKey.includes('.') 
+            ? Utils.Language.t(messageKey) 
+            : messageKey;
+        
         // Create notification element
         const notification = Utils.DOM.createElement('div', {
             className: `fixed top-4 right-4 p-4 rounded-lg shadow-lg z-50 transition-all duration-300 ${
@@ -592,7 +603,7 @@ class GravityIonApp {
             innerHTML: `
                 <div class="flex items-center justify-between">
                     <span>${message}</span>
-                    <button class="ml-4 text-white hover:text-gray-200" aria-label="關閉通知">
+                    <button class="ml-4 text-white hover:text-gray-200" aria-label="${Utils.Language.t('common.close')}">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                         </svg>

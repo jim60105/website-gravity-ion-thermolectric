@@ -512,6 +512,45 @@ const URL = {
     }
 };
 
+/**
+ * Language Utilities
+ */
+const Language = {
+    /**
+     * Get current language from global Lang instance
+     * @returns {string} 'zh' or 'en'
+     */
+    getCurrent() {
+        return window.Lang ? window.Lang.getCurrentLang() : 'zh';
+    },
+
+    /**
+     * Translate key using global Lang instance
+     * @param {string} key - Translation key
+     * @param {Object} params - Parameters for interpolation
+     * @returns {string} Translated text
+     */
+    t(key, params = {}) {
+        return window.Lang ? window.Lang.t(key, params) : key;
+    },
+
+    /**
+     * Check if current language is Chinese
+     * @returns {boolean}
+     */
+    isZh() {
+        return this.getCurrent() === 'zh';
+    },
+
+    /**
+     * Check if current language is English
+     * @returns {boolean}
+     */
+    isEn() {
+        return this.getCurrent() === 'en';
+    }
+};
+
 // Export utilities for module usage
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
@@ -521,7 +560,8 @@ if (typeof module !== 'undefined' && module.exports) {
         Performance,
         MathUtils,
         Storage,
-        URL
+        URL,
+        Language
     };
 }
 
@@ -533,5 +573,6 @@ window.Utils = {
     Performance,
     MathUtils,
     Storage,
-    URL
+    URL,
+    Language
 };

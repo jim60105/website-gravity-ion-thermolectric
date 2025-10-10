@@ -12,13 +12,17 @@ class ExperimentSimulation {
         top: 0.012,
         bottom: 0.0,
         difference: 0.012,
-        direction: '向上'
+        get direction() {
+          return Utils.Language.t('experiment.upward');
+        }
       },
       upsideDown: {
         top: 0.0,
         bottom: 0.012,
         difference: -0.012,
-        direction: '向下'
+        get direction() {
+          return Utils.Language.t('experiment.downward');
+        }
       }
     };
     this.init();
@@ -134,7 +138,8 @@ class ExperimentSimulation {
 
     if (fieldDirection) {
       fieldDirection.textContent = data.direction;
-      fieldDirection.className = `value text-2xl font-bold ${data.direction === '向上' ? 'text-plasma-purple' : 'text-orange-600'}`;
+      const isUpward = data.direction === Utils.Language.t('experiment.upward');
+      fieldDirection.className = `value text-2xl font-bold ${isUpward ? 'text-plasma-purple' : 'text-orange-600'}`;
     }
 
     // Add animation effect to updated values

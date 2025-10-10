@@ -38,7 +38,8 @@ class DataVisualization {
 
     // 1 month data (daily measurements)
     for (let day = 1; day <= 30; day++) {
-      data['1month'].labels.push(`第${day}天`);
+      const dayLabel = Utils.Language.isZh() ? `第${day}天` : `Day ${day}`;
+      data['1month'].labels.push(dayLabel);
       // Stable voltage around 1.2V with small variations
       const baseVoltage = 1.2;
       const variation = (Math.random() - 0.5) * 0.04; // ±2% variation
@@ -51,7 +52,10 @@ class DataVisualization {
 
     // 3 months data (weekly measurements)
     for (let week = 1; week <= 12; week++) {
-      data['3months'].labels.push(`第${week}週`);
+      const weekLabel = Utils.Language.isZh() 
+        ? `第${week}週` 
+        : `Week ${week}`;
+      data['3months'].labels.push(weekLabel);
       const baseVoltage = 1.2;
       const variation = (Math.random() - 0.5) * 0.04;
       data['3months'].voltage.push(baseVoltage + variation);
@@ -85,7 +89,7 @@ class DataVisualization {
       data: {
         labels: data.labels,
         datasets: [{
-          label: '電壓 (V)',
+          label: Utils.Language.isZh() ? '電壓 (V)' : 'Voltage (V)',
           data: data.voltage,
           borderColor: '#2563eb',
           backgroundColor: 'rgba(37, 99, 235, 0.1)',
@@ -128,15 +132,18 @@ class DataVisualization {
             displayColors: false,
             callbacks: {
               title: function(context) {
-                return `時間點: ${context[0].label}`;
+                const timeLabel = Utils.Language.isZh() ? '時間點' : 'Time';
+                return `${timeLabel}: ${context[0].label}`;
               },
               label: function(context) {
-                return `電壓: ${context.parsed.y.toFixed(3)}V`;
+                const voltageLabel = Utils.Language.isZh() ? '電壓' : 'Voltage';
+                return `${voltageLabel}: ${context.parsed.y.toFixed(3)}V`;
               },
               afterLabel: function(context) {
                 const currentData = this.chartData[this.currentPeriod];
                 const current = currentData.current[context.dataIndex];
-                return `電流: ${current.toFixed(2)}µA`;
+                const currentLabel = Utils.Language.isZh() ? '電流' : 'Current';
+                return `${currentLabel}: ${current.toFixed(2)}µA`;
               }.bind(this)
             }
           }
@@ -146,7 +153,7 @@ class DataVisualization {
             display: true,
             title: {
               display: true,
-              text: '時間',
+              text: Utils.Language.isZh() ? '時間' : 'Time',
               color: '#374151',
               font: {
                 size: 14,
@@ -166,7 +173,7 @@ class DataVisualization {
             display: true,
             title: {
               display: true,
-              text: '電壓 (V)',
+              text: Utils.Language.isZh() ? '電壓 (V)' : 'Voltage (V)',
               color: '#374151',
               font: {
                 size: 14,
@@ -247,7 +254,8 @@ class DataVisualization {
 
     if (fieldElement) {
       fieldElement.textContent = fieldDirection;
-      fieldElement.style.color = fieldDirection === '向上' ? '#059669' : '#dc2626';
+      const upwardText = Utils.Language.t('experiment.upward');
+      fieldElement.style.color = fieldDirection === upwardText ? '#059669' : '#dc2626';
     }
   }
 
