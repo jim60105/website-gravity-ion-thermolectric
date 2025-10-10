@@ -292,7 +292,7 @@
                 <button
                   id="hero-video-btn"
                   class="group border-2 border-energy-gold text-energy-gold hover:bg-energy-gold hover:text-deep-space font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-energy-gold/50"
-                  data-video-url="https://youtube.com/watch?v=example"
+                  data-video-url="https://youtube.com/watch?v=JgQdZ7Nlv3I"
                 >
                   <span class="flex items-center gap-2">
                     <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
@@ -547,13 +547,13 @@
                   <div class="videos-container grid lg:grid-cols-2 gap-8">
                     <!-- 影片 1 -->
                     <div class="video-wrapper">
-                      <h5 class="text-xl font-medium text-energy-gold mb-4">片段一：核心原理解析 (9:54-11:53)</h5>
+                      <h5 class="text-xl font-medium text-energy-gold mb-4">片段一：熱能轉電能原理解析</h5>
                       <div class="video-container bg-black rounded-lg overflow-hidden" style="aspect-ratio: 16/9;">
                         <iframe
                           id="video-1"
                           class="w-full h-full"
-                          src="https://www.youtube-nocookie.com/embed/NA_FsBknLV0?start=594&end=713&loop=1&playlist=NA_FsBknLV0&controls=1&modestbranding=1&rel=0"
-                          title="重力離子熱電轉換核心原理"
+                          src="https://www.youtube-nocookie.com/embed/JgQdZ7Nlv3I?controls=1&modestbranding=1&rel=0"
+                          title="熱能轉電能原理解析"
                           frameborder="0"
                           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                           referrerpolicy="strict-origin-when-cross-origin"
@@ -1150,200 +1150,6 @@
             </div>
           </div>
 
-          <!-- Interactive Particle Simulation -->
-          <div class="interactive-simulation">
-            <div class="text-center mb-16">
-              <h3 class="text-3xl font-bold text-electric-blue mb-6">互動式粒子模擬</h3>
-              <p class="text-xl text-gray-100 max-w-4xl mx-auto">
-                調整重力強度，觀察不同質量粒子的分離過程和電場變化
-              </p>
-            </div>
-            
-            <div class="simulation-container bg-black/30 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <!-- Education Module (Inline Block) -->
-              <div class="education-module bg-white/5 rounded-lg p-6 mb-8">
-                <h3 class="text-2xl font-bold text-white mb-4">🎓 互動式學習模組</h3>
-                
-                <!-- Learning Path Selection -->
-                <div class="learning-paths grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                  <div class="path-card bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-4 rounded-lg border border-white/10 cursor-pointer hover:bg-white/10 transition-all" data-path="basics">
-                    <h4 class="text-lg font-semibold text-white mb-2">🔬 基礎理論</h4>
-                    <p class="text-gray-300 text-sm">波茲曼分布與離子分離原理</p>
-                  </div>
-                  <div class="path-card bg-gradient-to-br from-green-500/20 to-blue-500/20 p-4 rounded-lg border border-white/10 cursor-pointer hover:bg-white/10 transition-all" data-path="experiments">
-                    <h4 class="text-lg font-semibold text-white mb-2">⚗️ 實驗重現</h4>
-                    <p class="text-gray-300 text-sm">Tolman 1910 & Chen 2024</p>
-                  </div>
-                  <div class="path-card bg-gradient-to-br from-purple-500/20 to-pink-500/20 p-4 rounded-lg border border-white/10 cursor-pointer hover:bg-white/10 transition-all" data-path="applications">
-                    <h4 class="text-lg font-semibold text-white mb-2">⚙️ 工程應用</h4>
-                    <p class="text-gray-300 text-sm">功率計算與系統設計</p>
-                  </div>
-                </div>
-                
-                <!-- Theory Content Area -->
-                <div class="theory-content bg-black/30 rounded-lg p-4 mb-4" id="theory-content">
-                  <div class="default-content">
-                    <h4 class="text-lg font-semibold text-electric-blue mb-3">歡迎使用科學教育模組</h4>
-                    <p class="text-gray-300 mb-3">選擇上方的學習路徑來開始探索重力離子熱電技術的科學原理。</p>
-                    <div class="key-concepts grid grid-cols-2 gap-4">
-                      <div class="concept">
-                        <h5 class="text-sm font-semibold text-energy-gold">波茲曼分布</h5>
-                        <p class="text-xs text-gray-400">C(h+Δh)/C(h) = exp(-mGΔh/kT)</p>
-                      </div>
-                      <div class="concept">
-                        <h5 class="text-sm font-semibold text-energy-gold">電場強度</h5>
-                        <p class="text-xs text-gray-400">E = (m重 - m輕)G / (2q)</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Enhanced Controls with New Parameter System -->
-              <div class="simulation-controls mb-6 space-y-4">
-                <div class="physics-parameters bg-white/5 rounded-lg p-4">
-                  <h4 class="text-lg font-semibold text-white mb-4">🔧 物理參數控制</h4>
-                  
-                  <div class="control-grid grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <!-- Acceleration Control -->
-                    <div class="control-group">
-                      <label for="acceleration-slider" class="block text-sm font-medium text-gray-100 mb-2">
-                        加速度倍數 (g)
-                      </label>
-                      <input
-                        type="range"
-                        id="acceleration-slider"
-                        min="1"
-                        max="100"
-                        step="1"
-                        value="1"
-                        class="slider bg-gray-700 rounded-lg appearance-none cursor-pointer w-full"
-                      />
-                      <div class="flex justify-between items-center mt-2">
-                        <span id="acceleration-value" class="text-energy-gold font-mono">1g (9.81 m/s²)</span>
-                        <span class="text-xs text-gray-400">1-100g</span>
-                      </div>
-                    </div>
-                    
-                    <!-- Temperature Control -->
-                    <div class="control-group">
-                      <label for="temperature-slider" class="block text-sm font-medium text-gray-100 mb-2">
-                        溫度 (K)
-                      </label>
-                      <input
-                        type="range"
-                        id="temperature-slider"
-                        min="200"
-                        max="400"
-                        step="5"
-                        value="298"
-                        class="slider bg-gray-700 rounded-lg appearance-none cursor-pointer w-full"
-                      />
-                      <div class="flex justify-between items-center mt-2">
-                        <span id="temperature-value" class="text-electric-blue font-mono">298K (25°C)</span>
-                        <span class="text-xs text-gray-400">200-400K</span>
-                      </div>
-                    </div>
-                    
-                    <!-- Ion System Selection -->
-                    <div class="control-group">
-                      <label for="ion-system-select" class="block text-sm font-medium text-gray-100 mb-2">
-                        離子系統
-                      </label>
-                      <select
-                        id="ion-system-select"
-                        class="w-full bg-gray-700 text-white rounded-lg p-2 border border-gray-600 focus:border-electric-blue focus:outline-none"
-                      >
-                        <option value="HI">氫碘酸 (HI) - 最佳效能</option>
-                        <option value="LiCl">氯化鋰 (LiCl) - 經典系統</option>
-                        <option value="KCl">氯化鉀 (KCl) - 穩定性佳</option>
-                      </select>
-                      <div class="mt-2">
-                        <span class="text-xs text-gray-400" id="ion-system-description">最佳效能系統</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <!-- Safety Status and Measurements -->
-                  <div class="measurements-display bg-black/30 rounded-lg p-4 mt-4">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                      <div class="measurement">
-                        <div class="text-xs text-gray-400">電場強度</div>
-                        <div class="text-lg font-mono text-energy-gold" id="electric-field-display">0 V/m</div>
-                      </div>
-                      <div class="measurement">
-                        <div class="text-xs text-gray-400">安全狀態</div>
-                        <div class="text-lg font-mono text-green-400" id="safety-status-display">安全</div>
-                      </div>
-                      <div class="measurement">
-                        <div class="text-xs text-gray-400">波茲曼比</div>
-                        <div class="text-lg font-mono text-electric-blue" id="boltzmann-ratio-display">1.00</div>
-                      </div>
-                      <div class="measurement">
-                        <div class="text-xs text-gray-400">功率密度</div>
-                        <div class="text-lg font-mono text-plasma-purple" id="power-density-display">0 W/m³</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="action-controls flex justify-center">
-                  <button
-                    id="reset-simulation"
-                    class="bg-plasma-purple hover:bg-plasma-purple/80 text-white px-6 py-2 rounded-lg transition-colors duration-300"
-                  >
-                    重置模擬
-                  </button>
-                </div>
-              </div>
-              
-              <div class="simulation-display relative bg-black/50 rounded-lg overflow-hidden">
-                <canvas
-                  id="scientific-particle-canvas"
-                  class="w-full h-96"
-                  aria-label="粒子模擬器 - 顯示重力場對不同質量粒子的影響"
-                ></canvas>
-                
-                <!-- Particle Legend -->
-                <div class="simulation-legend absolute top-4 left-4 bg-black/70 backdrop-blur-sm rounded-lg p-4">
-                  <h5 class="text-white font-semibold mb-2">粒子圖例</h5>
-                  <div class="legend-items space-y-2">
-                    <div class="legend-item flex items-center space-x-2">
-                      <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                      <span class="text-gray-100 text-sm">輕粒子 (負離子)</span>
-                    </div>
-                    <div class="legend-item flex items-center space-x-2">
-                      <div class="w-4 h-4 bg-blue-400 rounded-full"></div>
-                      <span class="text-gray-100 text-sm">重粒子 (正離子)</span>
-                    </div>
-                    <div class="legend-item flex items-center space-x-2">
-                      <div class="w-2 h-2 bg-red-400 rounded-full"></div>
-                      <span class="text-gray-100 text-sm">電子流</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Real-time Data Display -->
-                <div class="simulation-data absolute top-4 right-4 bg-black/70 backdrop-blur-sm rounded-lg p-4">
-                  <h5 class="text-white font-semibold mb-2">即時數據</h5>
-                  <div class="data-items space-y-1 text-sm">
-                    <div class="data-item">
-                      <span class="text-gray-100">電場強度：</span>
-                      <span id="electric-field-value" class="text-green-400 font-mono">0.00 V/m</span>
-                    </div>
-                    <div class="data-item">
-                      <span class="text-gray-100">分離度：</span>
-                      <span id="separation-value" class="text-blue-400 font-mono">0%</span>
-                    </div>
-                    <div class="data-item">
-                      <span class="text-gray-100">電流密度：</span>
-                      <span id="current-value" class="text-red-400 font-mono">0.00 A/m²</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -2054,7 +1860,7 @@
                       <h6 class="font-semibold text-gray-700 mb-2">⚡ 離子質量差異</h6>
                       <ul class="text-gray-600 space-y-1">
                         <li>• H⁺: 1.15×10⁻²⁶ kg, I⁻: 2.11×10⁻²⁵ kg</li>
-                        <li>• Li⁺: 1.15×10⁻²⁶ kg, Cl⁻: 5.89×10⁻²⁶ kg</li>
+                        <li>• Li⁺: 1.15×10⁻²⁶ kg, I⁻: 2.11×10⁻²⁵ kg</li>
                         <li>• K⁺: 6.49×10⁻²⁶ kg, Cl⁻: 5.89×10⁻²⁶ kg</li>
                       </ul>
                     </div>
@@ -2069,7 +1875,7 @@
                   </label>
                   <select id="ion-system-select" class="w-full p-3 border-2 border-gray-400 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-600 bg-white text-gray-900 font-semibold shadow-sm">
                     <option value="HI" class="text-gray-900 bg-white font-semibold">HI (氫碘酸) - 最高效率 72 W/m³</option>
-                    <option value="LiCl" class="text-gray-900 bg-white font-semibold">LiCl (氯化鋰) - Tolman 實驗驗證</option>
+                    <option value="LiI" class="text-gray-900 bg-white font-semibold">LiI (碘化鋰) - Tolman 實驗驗證</option>
                     <option value="KCl" class="text-gray-900 bg-white font-semibold">KCl (氯化鉀) - 穩定性良好</option>
                   </select>
                   <p class="text-xs text-gray-500 mt-1">不同離子質量差異產生不同的電場強度</p>
@@ -2163,9 +1969,9 @@
                       <p class="text-xs text-gray-500">W/m³</p>
                     </div>
                     <div class="metric-card bg-rose-50 rounded-lg p-3 border border-rose-200">
-                      <h5 class="text-xs font-semibold text-gray-600 mb-1">LiCl 效率</h5>
+                      <h5 class="text-xs font-semibold text-gray-600 mb-1">LiI 效率</h5>
                       <div class="text-lg font-bold text-rose-600">
-                        <span id="licl-efficiency">0.0</span>
+                        <span id="lii-efficiency">0.0</span>
                       </div>
                       <p class="text-xs text-gray-500">W/m³</p>
                     </div>
@@ -2407,7 +2213,7 @@
                           <p class="text-sm text-purple-700 leading-relaxed">不同離子質量差對發電效率的影響，質量差越大，電場強度越強</p>
                           <div class="mt-4 p-4 bg-indigo-50 rounded-lg">
                             <div class="text-xs text-indigo-600 font-semibold">效能排序</div>
-                            <div class="text-xs text-indigo-700 mt-1">HI > LiCl > KCl<br>按電場強度排序</div>
+                            <div class="text-xs text-indigo-700 mt-1">HI > LiI > KI<br>按電場強度排序</div>
                           </div>
                         </div>
                       </div>

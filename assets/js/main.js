@@ -248,16 +248,14 @@ class GravityIonApp {
         if (videoBtn) {
             Utils.DOM.on(videoBtn, 'click', (e) => {
                 e.preventDefault();
-                // const videoUrl = videoBtn.dataset.videoUrl;
+                const videoUrl = videoBtn.dataset.videoUrl;
 
-                // For now, show a notification. In real implementation,
-                // this would open a modal or redirect to YouTube
-                this.showNotification('影片功能即將推出！', 'info');
-
-                // Example of how to open YouTube video in new tab:
-                // if (videoUrl) {
-                //     window.open(videoUrl, '_blank', 'noopener,noreferrer');
-                // }
+                if (videoUrl) {
+                    window.open(videoUrl, '_blank', 'noopener,noreferrer');
+                } else {
+                    // Fallback URL if data-video-url is not set
+                    window.open('https://youtube.com/watch?v=JgQdZ7Nlv3I', '_blank', 'noopener,noreferrer');
+                }
             });
         }
 
