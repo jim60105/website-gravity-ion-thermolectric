@@ -110,13 +110,13 @@ class MathRenderer {
             latex: `\\frac{C(h+\\Delta h)}{C(h)} = \\exp\\left(\\frac{-mG\\Delta h}{k_B T}\\right)`,
             description: 'Boltzmann distribution ratio in gravitational field',
             variables: {
-                'C(h+\\Delta h)': '高度 h+Δh 處的離子濃度',
-                'C(h)': '高度 h 處的離子濃度',
-                'm': '離子質量差異',
-                'G': '重力加速度',
-                '\\Delta h': '高度差',
-                'k_B': '波茲曼常數 (1.38×10⁻²³ J/K)',
-                'T': '絕對溫度 (K)'
+                'C(h+\\Delta h)': Utils.Language.isZh() ? '高度 h+Δh 處的離子濃度' : 'Ion concentration at height h+Δh',
+                'C(h)': Utils.Language.isZh() ? '高度 h 處的離子濃度' : 'Ion concentration at height h',
+                'm': Utils.Language.isZh() ? '離子質量差異' : 'Ion mass difference',
+                'G': Utils.Language.isZh() ? '重力加速度' : 'Gravitational acceleration',
+                '\\Delta h': Utils.Language.isZh() ? '高度差' : 'Height difference',
+                'k_B': Utils.Language.isZh() ? '波茲曼常數 (1.38×10⁻²³ J/K)' : 'Boltzmann constant (1.38×10⁻²³ J/K)',
+                'T': Utils.Language.isZh() ? '絕對溫度 (K)' : 'Absolute temperature (K)'
             }
         });
 
@@ -125,11 +125,11 @@ class MathRenderer {
             latex: `E = \\frac{(m_1 - m_2)G}{2q}`,
             description: 'Self-generated electric field in ion system',
             variables: {
-                'E': '電場強度 (V/m)',
-                'm_1': '重離子質量 (kg)',
-                'm_2': '輕離子質量 (kg)',
-                'G': '重力加速度 (m/s²)',
-                'q': '基本電荷 (1.6×10⁻¹⁹ C)'
+                'E': Utils.Language.isZh() ? '電場強度 (V/m)' : 'Electric field strength (V/m)',
+                'm_1': Utils.Language.isZh() ? '重離子質量 (kg)' : 'Heavy ion mass (kg)',
+                'm_2': Utils.Language.isZh() ? '輕離子質量 (kg)' : 'Light ion mass (kg)',
+                'G': Utils.Language.isZh() ? '重力加速度 (m/s²)' : 'Gravitational acceleration (m/s²)',
+                'q': Utils.Language.isZh() ? '基本電荷 (1.6×10⁻¹⁹ C)' : 'Elementary charge (1.6×10⁻¹⁹ C)'
             }
         });
 
@@ -138,12 +138,12 @@ class MathRenderer {
             latex: `\\Delta V = \\frac{(m_1 - m_2)GH}{2q}`,
             description: 'Voltage difference across ion system height',
             variables: {
-                '\\Delta V': '電壓差 (V)',
-                'm_1': '重離子質量 (kg)',
-                'm_2': '輕離子質量 (kg)',
-                'G': '重力加速度 (m/s²)',
-                'H': '系統高度 (m)',
-                'q': '基本電荷 (1.6×10⁻¹⁹ C)'
+                '\\Delta V': Utils.Language.isZh() ? '電壓差 (V)' : 'Voltage difference (V)',
+                'm_1': Utils.Language.isZh() ? '重離子質量 (kg)' : 'Heavy ion mass (kg)',
+                'm_2': Utils.Language.isZh() ? '輕離子質量 (kg)' : 'Light ion mass (kg)',
+                'G': Utils.Language.isZh() ? '重力加速度 (m/s²)' : 'Gravitational acceleration (m/s²)',
+                'H': Utils.Language.isZh() ? '系統高度 (m)' : 'System height (m)',
+                'q': Utils.Language.isZh() ? '基本電荷 (1.6×10⁻¹⁹ C)' : 'Elementary charge (1.6×10⁻¹⁹ C)'
             }
         });
 
@@ -152,9 +152,9 @@ class MathRenderer {
             latex: `a = \\omega^2 r`,
             description: 'Centrifugal acceleration in rotating system',
             variables: {
-                'a': '離心加速度 (m/s²)',
-                '\\omega': '角速度 (rad/s)',
-                'r': '旋轉半徑 (m)'
+                'a': Utils.Language.isZh() ? '離心加速度 (m/s²)' : 'Centrifugal acceleration (m/s²)',
+                '\\omega': Utils.Language.isZh() ? '角速度 (rad/s)' : 'Angular velocity (rad/s)',
+                'r': Utils.Language.isZh() ? '旋轉半徑 (m)' : 'Rotation radius (m)'
             }
         });
 
@@ -163,9 +163,9 @@ class MathRenderer {
             latex: `P = \\frac{(\\Delta V/2)^2}{R}`,
             description: 'Power density calculation',
             variables: {
-                'P': '功率密度 (W/m³)',
-                '\\Delta V': '電壓差 (V)',
-                'R': '電阻 (Ω)'
+                'P': Utils.Language.isZh() ? '功率密度 (W/m³)' : 'Power density (W/m³)',
+                '\\Delta V': Utils.Language.isZh() ? '電壓差 (V)' : 'Voltage difference (V)',
+                'R': Utils.Language.isZh() ? '電阻 (Ω)' : 'Resistance (Ω)'
             }
         });
 
@@ -174,10 +174,10 @@ class MathRenderer {
             latex: `\\omega_{\\text{max}} = \\sqrt{\\frac{\\sigma_{\\text{allow}}}{\\rho \\times r^2}}`,
             description: 'Maximum safe rotational speed',
             variables: {
-                '\\omega_{\\text{max}}': '最大角速度 (rad/s)',
-                '\\sigma_{\\text{allow}}': '許用應力 (Pa)',
-                '\\rho': '材料密度 (kg/m³)',
-                'r': '旋轉半徑 (m)'
+                '\\omega_{\\text{max}}': Utils.Language.isZh() ? '最大角速度 (rad/s)' : 'Maximum angular velocity (rad/s)',
+                '\\sigma_{\\text{allow}}': Utils.Language.isZh() ? '許用應力 (Pa)' : 'Allowable stress (Pa)',
+                '\\rho': Utils.Language.isZh() ? '材料密度 (kg/m³)' : 'Material density (kg/m³)',
+                'r': Utils.Language.isZh() ? '旋轉半徑 (m)' : 'Rotation radius (m)'
             }
         });
 
@@ -186,9 +186,9 @@ class MathRenderer {
             latex: `SF = \\frac{\\sigma_{\\text{allow}}}{\\sigma_{\\text{actual}}}`,
             description: 'Safety factor calculation',
             variables: {
-                'SF': '安全係數 (無因次)',
-                '\\sigma_{\\text{allow}}': '許用應力 (Pa)',
-                '\\sigma_{\\text{actual}}': '實際應力 (Pa)'
+                'SF': Utils.Language.isZh() ? '安全係數 (無因次)' : 'Safety factor (dimensionless)',
+                '\\sigma_{\\text{allow}}': Utils.Language.isZh() ? '許用應力 (Pa)' : 'Allowable stress (Pa)',
+                '\\sigma_{\\text{actual}}': Utils.Language.isZh() ? '實際應力 (Pa)' : 'Actual stress (Pa)'
             }
         });
 
@@ -197,65 +197,65 @@ class MathRenderer {
         // Basic physics - Boltzmann distribution (educational)
         this.defineEquation('educational-boltzmann', {
             latex: `\\frac{C(h+\\Delta h)}{C(h)} = \\exp\\left(\\frac{-mg\\Delta h}{kT}\\right)`,
-            description: '波茲曼分布描述離子在重力場中的濃度分布變化',
+            description: Utils.Language.isZh() ? '波茲曼分布描述離子在重力場中的濃度分布變化' : 'Boltzmann distribution describes ion concentration distribution changes in a gravitational field',
             variables: {
-                'C(h+\\Delta h)': '高度 h+Δh 處的離子濃度',
-                'C(h)': '高度 h 處的離子濃度',
-                'm': '離子質量差異 (kg)',
-                'g': '重力加速度 (9.81 m/s²)',
-                '\\Delta h': '高度差 (m)',
-                'k': '波茲曼常數 (1.38×10⁻²³ J/K)',
-                'T': '絕對溫度 (K)'
+                'C(h+\\Delta h)': Utils.Language.isZh() ? '高度 h+Δh 處的離子濃度' : 'Ion concentration at height h+Δh',
+                'C(h)': Utils.Language.isZh() ? '高度 h 處的離子濃度' : 'Ion concentration at height h',
+                'm': Utils.Language.isZh() ? '離子質量差異 (kg)' : 'Ion mass difference (kg)',
+                'g': Utils.Language.isZh() ? '重力加速度 (9.81 m/s²)' : 'Gravitational acceleration (9.81 m/s²)',
+                '\\Delta h': Utils.Language.isZh() ? '高度差 (m)' : 'Height difference (m)',
+                'k': Utils.Language.isZh() ? '波茲曼常數 (1.38×10⁻²³ J/K)' : 'Boltzmann constant (1.38×10⁻²³ J/K)',
+                'T': Utils.Language.isZh() ? '絕對溫度 (K)' : 'Absolute temperature (K)'
             }
         });
 
         // Basic physics - Electric field strength (educational)
         this.defineEquation('educational-electric-field', {
             latex: `E = \\frac{(m_1 - m_2)g}{2q}`,
-            description: '不同質量離子產生的電場強度',
+            description: Utils.Language.isZh() ? '不同質量離子產生的電場強度' : 'Electric field strength generated by ions of different masses',
             variables: {
-                'E': '電場強度 (V/m)',
-                'm_1': '重離子質量 (kg)',
-                'm_2': '輕離子質量 (kg)',
-                'g': '重力加速度 (9.81 m/s²)',
-                'q': '離子電荷 (C)'
+                'E': Utils.Language.isZh() ? '電場強度 (V/m)' : 'Electric field strength (V/m)',
+                'm_1': Utils.Language.isZh() ? '重離子質量 (kg)' : 'Heavy ion mass (kg)',
+                'm_2': Utils.Language.isZh() ? '輕離子質量 (kg)' : 'Light ion mass (kg)',
+                'g': Utils.Language.isZh() ? '重力加速度 (9.81 m/s²)' : 'Gravitational acceleration (9.81 m/s²)',
+                'q': Utils.Language.isZh() ? '離子電荷 (C)' : 'Ion charge (C)'
             }
         });
 
         // Basic physics - Voltage difference (educational)
         this.defineEquation('educational-voltage-difference', {
             latex: `\\Delta V = \\frac{(m_1 - m_2)GH}{2q}`,
-            description: '可測量的電位差',
+            description: Utils.Language.isZh() ? '可測量的電位差' : 'Measurable potential difference',
             variables: {
-                '\\Delta V': '電壓差 (V)',
-                'm_1': '重離子質量 (kg)',
-                'm_2': '輕離子質量 (kg)',
-                'G': '重力加速度或離心加速度 (m/s²)',
-                'H': '有效高度 (m)',
-                'q': '離子電荷 (C)'
+                '\\Delta V': Utils.Language.isZh() ? '電壓差 (V)' : 'Voltage difference (V)',
+                'm_1': Utils.Language.isZh() ? '重離子質量 (kg)' : 'Heavy ion mass (kg)',
+                'm_2': Utils.Language.isZh() ? '輕離子質量 (kg)' : 'Light ion mass (kg)',
+                'G': Utils.Language.isZh() ? '重力加速度或離心加速度 (m/s²)' : 'Gravitational or centrifugal acceleration (m/s²)',
+                'H': Utils.Language.isZh() ? '有效高度 (m)' : 'Effective height (m)',
+                'q': Utils.Language.isZh() ? '離子電荷 (C)' : 'Ion charge (C)'
             }
         });
 
         // Advanced - Power density (educational)
         this.defineEquation('educational-power-density', {
             latex: `P = \\frac{(\\Delta V/2)^2}{R}`,
-            description: '實際可獲得的功率輸出',
+            description: Utils.Language.isZh() ? '實際可獲得的功率輸出' : 'Actual achievable power output',
             variables: {
-                'P': '功率密度 (W/m³)',
-                '\\Delta V': '電壓差 (V)',
-                'R': '內阻 (Ω)'
+                'P': Utils.Language.isZh() ? '功率密度 (W/m³)' : 'Power density (W/m³)',
+                '\\Delta V': Utils.Language.isZh() ? '電壓差 (V)' : 'Voltage difference (V)',
+                'R': Utils.Language.isZh() ? '內阻 (Ω)' : 'Internal resistance (Ω)'
             }
         });
 
         // Advanced - Maximum rotational speed (educational)
         this.defineEquation('educational-max-speed', {
             latex: `\\omega_{\\text{max}} = \\sqrt{\\frac{\\sigma_{\\text{allow}}}{\\rho \\times r^2}}`,
-            description: '材料結構的最大安全轉速',
+            description: Utils.Language.isZh() ? '材料結構的最大安全轉速' : 'Maximum safe rotational speed of material structure',
             variables: {
-                '\\omega_{\\text{max}}': '最大角速度 (rad/s)',
-                '\\sigma_{\\text{allow}}': '許用應力 (670 MPa for 7075-T6)',
-                '\\rho': '材料密度 (2810 kg/m³ for 7075-T6)',
-                'r': '旋轉半徑 (m)'
+                '\\omega_{\\text{max}}': Utils.Language.isZh() ? '最大角速度 (rad/s)' : 'Maximum angular velocity (rad/s)',
+                '\\sigma_{\\text{allow}}': Utils.Language.isZh() ? '許用應力 (670 MPa for 7075-T6)' : 'Allowable stress (670 MPa for 7075-T6)',
+                '\\rho': Utils.Language.isZh() ? '材料密度 (2810 kg/m³ for 7075-T6)' : 'Material density (2810 kg/m³ for 7075-T6)',
+                'r': Utils.Language.isZh() ? '旋轉半徑 (m)' : 'Rotation radius (m)'
             }
         });
     }
